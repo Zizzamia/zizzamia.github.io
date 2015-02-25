@@ -80,21 +80,30 @@
     <section data-bespoke-state="code">
       <div class="content">
         <h4>Run Benchpress on a largetable with and without debug-info</h4>
+
+        <p style="font-size:18px;text-align:left;padding-left:32px">$compileProvider.debugInfoEnabled(true);</p>
         <pre ng-non-bindable><code class="language-javascript">
       gcAmount | gcAmountInScript |         gcTime | gcTimeInScript |       render |         script
 ============== | ================ | ============== | ============== | ============ | ==============
-  11447.06±46% |     11307.91±52% |      19.83±54% |      19.01±61% |     55.57±8% |      115.40±6%</code></pre>
-        <pre ng-non-bindable><code class="language-javascript">
   15883.73±51% |     20150.42±60% |      26.86±44% |      25.99±46% |    60.59±14% |      132.38±6%</code></pre>
+        
+
+        <p style="font-size:18px;text-align:left;padding-left:32px">$compileProvider.debugInfoEnabled(false);</p>
+        <pre ng-non-bindable><code class="language-javascript">
+  11447.06±46% |     11307.91±52% |      19.83±54% |      19.01±61% |     55.57±8% |      115.40±6%</code></pre>
           <br />
           <br />
-          <h4>Difference</h4>
+          <p style="font-size:18px;text-align:left;padding-left:32px">Difference</p>
           <pre ng-non-bindable><code class="language-javascript">
          32.4% |            56.2% |            30% |            31% |         8.6% |          13.7%</code></pre>
       </div>
     </section>
 
-    
+    <section data-bespoke-state="full-text">
+      <div class="content">
+        
+      </div>
+    </section>
     
     <section data-bespoke-state="full-text">
       <div class="content">
