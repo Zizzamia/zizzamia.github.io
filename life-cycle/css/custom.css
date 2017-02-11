@@ -127,6 +127,18 @@ article.eating-under-the-sun::before {
   filter: grayscale(0) brightness(1);
   background-image: url("../img/eating-under-the-sun.gif");
 }
+article.choose::before {
+  -webkit-filter: blur(0.15px) grayscale(0.3);
+  -moz-filter: blur(0.15px) grayscale(0.3);
+  filter: blur(0.15px) grayscale(0.3);
+  background-image: url("../img/chose.gif");
+}
+article.erasing-memory::before {
+  -webkit-filter: blur(0.15px) grayscale(0.3);
+  -moz-filter: blur(0.15px) grayscale(0.3);
+  filter: blur(0.15px) grayscale(0.3);
+  background-image: url("../img/erasing-memory.gif");
+}
 article.trick::before {
   -webkit-filter: grayscale(0) brightness(1);
   -moz-filter: grayscale(0) brightness(1);
@@ -165,6 +177,8 @@ twitterwidget {
 .full-title .bespoke-slide,
 .piano .bespoke-slide,
 .horse .bespoke-slide,
+.choose .bespoke-slide,
+.erasing-memory .bespoke-slide,
 .deeper-game .bespoke-slide {
   margin-top: -1.4em;
   -webkit-box-align: center;
