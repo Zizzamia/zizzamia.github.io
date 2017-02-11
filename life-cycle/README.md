@@ -1,4 +1,4 @@
-Building high performance measurable directives
+The Secret Life(cycle) of Components
 
 <table>
   <tr>

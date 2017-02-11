@@ -121,6 +121,30 @@ article.piano::before {
   filter: blur(0.15px) grayscale(0.3);
   background-image: url("../img/piano.gif");
 }
+article.eating-under-the-sun::before {
+  -webkit-filter: grayscale(0) brightness(1);
+  -moz-filter: grayscale(0) brightness(1);
+  filter: grayscale(0) brightness(1);
+  background-image: url("../img/eating-under-the-sun.gif");
+}
+article.trick::before {
+  -webkit-filter: grayscale(0) brightness(1);
+  -moz-filter: grayscale(0) brightness(1);
+  filter: grayscale(0) brightness(1);
+  background-image: url("../img/trick.gif");
+}
+article.deeper-game::before {
+  -webkit-filter: blur(0.15px) grayscale(0.3);
+  -moz-filter: blur(0.15px) grayscale(0.3);
+  filter: blur(0.15px) grayscale(0.3);
+  background-image: url("../img/deeper-game.gif");
+}
+article.happy-face::before {
+  -webkit-filter: blur(0.15px) grayscale(0.3);
+  -moz-filter: blur(0.15px) grayscale(0.3);
+  filter: blur(0.15px) grayscale(0.3);
+  background-image: url("../img/happy-face.gif");
+}
 article.horse::before {
   -webkit-filter: blur(0.15px) grayscale(0.3);
   -moz-filter: blur(0.15px) grayscale(0.3);
@@ -129,11 +153,35 @@ article.horse::before {
 }
 
 
+twitterwidget {
+  margin: 0 auto!important;
+}
+.gist {
+  width: 80%;
+  margin: 30px auto;
+}
 
-
-
-
-
+.full-text .bespoke-slide,
+.full-title .bespoke-slide,
+.piano .bespoke-slide,
+.horse .bespoke-slide,
+.deeper-game .bespoke-slide {
+  margin-top: -1.4em;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-box-align: center;
+  box-align: center;
+}
+.piano .bespoke-slide,
+.horse .bespoke-slide {
+  margin-top: 0.2em;
+}
+.happy-face .bespoke-slide {
+  margin-top: 10%;
+}
+.deeper-game .bespoke-slide {
+  margin-top: 0%;
+}
 
 
 
@@ -205,20 +253,7 @@ article.horse::before {
 .twitter-body.no-margin .bespoke-slide {
   margin-top: 0;
 }
-.full-text .bespoke-slide,
-.full-title .bespoke-slide,
-.piano .bespoke-slide,
-.horse .bespoke-slide {
-  margin-top: -1.4em;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -ms-box-align: center;
-  box-align: center;
-}
-.piano .bespoke-slide,
-.horse .bespoke-slide {
-  margin-top: 0.2em;
-}
+
 .deep-gray-border {
   border: 3px solid #8899a6;
 }
@@ -261,4 +296,10 @@ pre code span {
 }
 .tomato {
   color: tomato;
+}
+.byline--notLine::before {
+  border: none!important;
+}
+.byline--notLine::after {
+  border: none!important;
 }
