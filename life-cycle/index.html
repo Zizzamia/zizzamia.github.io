@@ -14,7 +14,8 @@
       <div class="content">
         <h2>The Secret Life(cycle) of Components</h2>
         <div class="byline">
-          <div class="classy">
+          <div class="classy"
+          style="color:#e6e6e6">
             by Leonardo Zizzamia
           </div>
         </div>
@@ -28,6 +29,32 @@
     </section>
 
     <section data-bespoke-state="eating-under-the-sun">
+    </section>
+
+    
+
+    <section data-bespoke-state="full-text">
+      <div class="content">
+        <div class="byline byline--notLine">
+          <div class="classy">
+            <b>Article and Slides</b>
+          </div>
+        </div>
+        <div class="byline byline--notLine">
+          <div class="classy">
+            <a href="https://medium.com/@zizzamia" target="_blank">
+              https://medium.com/@zizzamia
+            </a>
+          </div>
+        </div>
+        <div class="byline byline--notLine">
+          <div class="classy">
+            <a href="http://zizzamia.github.io/life-cycle/" target="_blank">
+              http://zizzamia.github.io/life-cycle/
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section data-bespoke-state="full-text">
@@ -278,12 +305,17 @@
             projecting data and its change.
           </div>
         </div>
+        <p style="font-size:14px">
+          <a href="https://www.youtube.com/watch?v=CUxD91DWkGM" target="_blank">
+            Change detection explained by Pascal Precht ->
+          </a>
+        </p>
       </div>
     </section>
 
     <section data-bespoke-state="full-text">
       <div class="content">
-        <div class="byline">
+        <div class="byline byline--notLine">
           <div class="classy">
             constructor
           </div>
@@ -293,7 +325,7 @@
             vs
           </div>
         </div>
-        <div class="byline">
+        <div class="byline byline--notLine">
           <div class="classy">
             ngOnInit
           </div>
@@ -303,7 +335,7 @@
 
     <section data-bespoke-state="full-text">
       <div class="content">
-        <div class="byline">
+        <div class="byline byline--notLine">
           <div class="classy">
             ngOnChanges
           </div>
@@ -313,7 +345,7 @@
             vs
           </div>
         </div>
-        <div class="byline">
+        <div class="byline byline--notLine">
           <div class="classy">
             ngDoCheck
           </div>
@@ -323,7 +355,7 @@
 
     <section data-bespoke-state="full-text">
       <div class="content">
-        <div class="byline">
+        <div class="byline byline--notLine">
           <div class="classy">
             ngAfterContentInit
           </div>
@@ -333,7 +365,7 @@
             vs
           </div>
         </div>
-        <div class="byline">
+        <div class="byline byline--notLine">
           <div class="classy">
             ngAfterViewInit
           </div>
@@ -343,7 +375,7 @@
 
     <section data-bespoke-state="full-text">
       <div class="content">
-        <div class="byline">
+        <div class="byline byline--notLine">
           <div class="classy">
             ngOnChanges
           </div>
@@ -353,7 +385,7 @@
             vs
           </div>
         </div>
-        <div class="byline">
+        <div class="byline byline--notLine">
           <div class="classy">
             ngAfterViewChecked
           </div>
@@ -369,9 +401,9 @@
 
      <section data-bespoke-state="full-text">
       <div class="content">
-        <div class="byline">
-          <div class="classy">
-            Let's use <b>Plan</b> ( https://getplan.co )
+        <div class="byline byline--notLine">
+          <div class="classy ">
+            <b>Let's use Plan ( <a href="https://getplan.co" target="_blank">https://getplan.co</a> )</b>
           </div>
         </div>
         <div class="byline">
@@ -584,7 +616,7 @@
         <div class="byline byline--notLine">
           <div class="classy">
             Change detection you generate<br />
-            by calling NgZone.run(callback)
+            by calling <b>NgZone.run(callback)</b>
           </div>
         </div>
         <div class="byline">
@@ -601,7 +633,6 @@
           <div class="classy">
             <b>The Tick Buster</b><br />
             Visualize how change detection will impact your performance<br />
-
           </div>
         </div>
         <div class="byline">
@@ -666,8 +697,8 @@
         <script src="https://gist.github.com/Zizzamia/d73bdda78ea6adcfefab36cfb684c11c.js"></script>
         <div class="byline byline--notLine">
           <div class="classy">
-            All these cases happen in with: mousemove, mouseup, <br />
-            resize, setTimeout, setInterval, requestAnimationFrame.
+            <b>The cause:</b><br/>
+            mousemove, mouseup, resize, setTimeout, setInterval, requestAnimationFrame.
           </div>
         </div>
       </div>
@@ -677,7 +708,7 @@
       <div class="content">
         <div class="byline byline--notLine">
           <div class="classy">
-            Inject the NgZone for executing work inside<br />
+            Inject the <b>NgZone</b> for executing work inside<br />
             or outside of the Angular zone.
           </div>
         </div>
@@ -689,8 +720,8 @@
       <div class="content">
         <div class="byline byline--notLine">
           <div class="classy">
-            Using a debugger inside our tick() <br />
-            and focus our attention to ZoneTask.invoke()
+            Using a debugger inside our <b>tick()</b> <br />
+            and focus our attention to <b>ZoneTask.invoke()</b>
           </div>
         </div>
         <script src="https://gist.github.com/Zizzamia/fbc909f93635aab1279e039176afd17a.js"></script>
@@ -713,7 +744,7 @@
       <div class="content">
         <div class="byline byline--notLine">
           <div class="classy">
-            ZoneTask inside Zone.js
+            ZoneTask inside <b>Zone.js</b>
           </div>
         </div>
         <script src="https://gist.github.com/Zizzamia/2d3d8036231dcfa338baf18df32f9cbf.js"></script>
@@ -773,18 +804,8 @@
             <b>Thanks to Lukas and Matias </b>
           </div>
         </div>
-        <img src="img/lukas.png" style="width:700px;border:3px solid white;" />
-        <img src="img/matias.png" style="width:700px;border:3px solid white;" />
-      </div>
-    </section>
-
-    <section data-bespoke-state="full-text">
-      <div class="content">
-        <div class="byline byline--notLine">
-          <div class="classy">
-            <b>Time to tweet...</b>
-          </div>
-        </div>
+        <img src="img/lukas.png" style="width:640px;border:3px solid white;" />
+        <img src="img/matias.png" style="width:640px;border:3px solid white;" />
       </div>
     </section>
 
@@ -792,9 +813,9 @@
       <div class="content">
         <h3>Thank You</h3>
         <h3>Grazie</h3>
+        <h3>Tusen tack</h3>
         <h3>Tusind tak</h3>
         <h3>Tusen takk</h3>
-        <h3>Tusen tack</h3>
         <h3>Þúsund þakkir</h3>
         <h3>Kiitos Paljon</h3>
       </div>
@@ -803,13 +824,13 @@
     <section data-bespoke-state="horse">
       <div class="content">
         <div class="byline">
-          <div class="classy">
+          <div class="classy" style="color:#e6e6e6">
             This has been
           </div>
         </div>
         <h2>The Secret Life(cycle) of Components</h2>
         <div class="byline">
-          <div class="classy">
+          <div class="classy" style="color:#e6e6e6">
             by Leonardo Zizzamia
           </div>
         </div>
@@ -817,7 +838,10 @@
           <div class="rounded-image">
             <img src="img/leo.jpg">
           </div>
-          <h3>@zizzamia</h3>
+          <h3>
+            <a href="https://twitter.com/Zizzamia"
+            style="color:white">@zizzamia</a>
+          </h3>
         </div>
       </div>
     </section>
