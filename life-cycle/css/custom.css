@@ -201,7 +201,7 @@ twitterwidget {
 
 .profile {
   margin: 0 auto;
-  width: 500px;
+  width: 600px;
 }
 .profile .rounded-image {
   display: inline-block;
@@ -218,10 +218,17 @@ twitterwidget {
   margin: 0;
   width: 100%;
 }
+.profile .rounded-image-white {
+  border: 2px solid white;
+}
 .profile h3 {
   display: inline-block;
   text-transform: lowercase;
   font-size: 2em;
+}
+.profile h3.twitter {
+  text-transform: inherit;
+  font-size: 1.6em;
 }
 
 .white-bg {

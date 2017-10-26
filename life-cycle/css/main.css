@@ -286,7 +286,8 @@ section {
   text-align: center;
 }
 section .content {
-  padding: 0 1em 1em 1em;
+  margin: auto;
+  padding: 0 0 1em 0;
   word-break: break-word;
 }
 h1, h2, h3 {
