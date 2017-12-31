@@ -5373,7 +5373,7 @@ var NgClass = /** @class */ (function () {
                 _this._toggleClass(record.item, true);
             }
             else {
-                throw new Error("NgClass can only toggle CSS classes expressed as strings, got " + Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ɵstringify */])(record.item));
+                throw new Error("NgClass can only toggle CSS classes expressed as strings, got " + Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* ɵstringify */])(record.item));
             }
         });
         changes.forEachRemovedItem(function (record) { return _this._toggleClass(record.item, false); });
@@ -7465,7 +7465,7 @@ function convertTimezoneToLocal(date, timezone, reverse) {
  * @return {?}
  */
 function invalidPipeArgumentError(type, value) {
-    return Error("InvalidPipeArgument: '" + value + "' for pipe '" + Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ɵstringify */])(type) + "'");
+    return Error("InvalidPipeArgument: '" + value + "' for pipe '" + Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* ɵstringify */])(type) + "'");
 }
 
 /**
@@ -9876,7 +9876,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* Version */]
 /* unused harmony export ɵRenderDebugInfo */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_4", function() { return _global; });
 /* unused harmony export ɵlooseIdentical */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_13", function() { return stringify; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_14", function() { return stringify; });
 /* unused harmony export ɵmakeDecorator */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_6", function() { return isObservable; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_7", function() { return isPromise; });
@@ -9906,10 +9906,10 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* Version */]
 /* unused harmony export ɵpad */
 /* unused harmony export ɵpod */
 /* unused harmony export ɵppd */
-/* unused harmony export ɵqud */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_14", function() { return textDef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_13", function() { return queryDef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_15", function() { return textDef; });
 /* unused harmony export ɵunv */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_15", function() { return viewDef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_16", function() { return viewDef; });
 /* unused harmony export AUTO_STYLE */
 /* unused harmony export trigger */
 /* unused harmony export animate */
