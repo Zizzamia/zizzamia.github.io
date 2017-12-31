@@ -48,23 +48,54 @@ module.exports = "<div class=\"Layout\">\n  <div class=\"Content\">\n    <h1>Per
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_perfume_js__ = __webpack_require__("../../../../perfume.js/dist/perfume.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = 'app';
+        var perfume = new __WEBPACK_IMPORTED_MODULE_1_perfume_js__["a" /* default */];
+        this.perfume = perfume;
+        this.perfume.firstPaint();
     }
+    AppComponent.prototype.fibonacci = function (num, memo) {
+        if (memo === void 0) { memo = {}; }
+        if (memo[num]) {
+            return memo[num];
+        }
+        if (num <= 1) {
+            return 1;
+        }
+        return memo[num] = this.fibonacci(num - 1, memo) + this.fibonacci(num - 2, memo);
+    };
+    AppComponent.prototype.measureFibonacci = function () {
+        this.perfume.start('fibonacci');
+        this.fibonacci(400);
+        var duration = this.perfume.end('fibonacci', true);
+        this.logFibonacci = "\u26A1\uFE0F Perfume.js: fibonacci " + duration.toFixed(2) + " ms";
+    };
+    AppComponent.prototype.customLogging = function () {
+        this.perfume.start('fibonacci');
+        this.fibonacci(400);
+        var duration = this.perfume.end('fibonacci');
+        this.perfume.log('Custom logging', duration);
+        this.logCustom = "\u26A1\uFE0F Perfume.js: Custom logging " + duration.toFixed(2) + " ms";
+    };
     AppComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'app-root',
             template: __webpack_require__("../../../../../src/app/app.component.html"),
             styles: [__webpack_require__("../../../../../src/app/app.component.css")]
-        })
+        }),
+        __metadata("design:paramtypes", [])
     ], AppComponent);
     return AppComponent;
 }());

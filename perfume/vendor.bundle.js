@@ -83,6 +83,170 @@ function toComment(sourceMap) {
 
 /***/ }),
 
+/***/ "../../../../perfume.js/dist/perfume.es5.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {var Perfume = /** @class */ (function () {
+    function Perfume() {
+        this.firstPaintDuration = 0;
+        this.metrics = {};
+        this.logPrefix = "⚡️ Perfume.js:";
+        if (!this.supportsPerfNow) {
+            throw Error(this.logPrefix + " Cannot be used in this browser.");
+        }
+    }
+    Object.defineProperty(Perfume.prototype, "supportsPerfNow", {
+        /**
+         * True if the browser supports the Navigation Timing API.
+         * @type {boolean}
+         */
+        get: function () {
+            return Boolean(window.performance && performance.now);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Perfume.prototype, "supportsPerfMark", {
+        /**
+         * True if the browser supports the User Timing API.
+         * Support: developer.mozilla.org/en-US/docs/Web/API/Performance/mark
+         * @type {boolean}
+         */
+        get: function () {
+            return Boolean(window.performance && performance.mark);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * This assumes the user has made only one measurement for the given
+     * name. Return the first PerformanceEntry objects for the given name.
+     */
+    Perfume.prototype.getMeasurementForGivenName = function (metricName) {
+        return performance.getEntriesByName(metricName)[0];
+    };
+    /**
+     * Get the duration of the timing metric or -1 if there a measurement has
+     * not been made. Use User Timing API results if available, otherwise return
+     * performance.now() fallback.
+     */
+    Perfume.prototype.getDurationByMetric = function (metricName) {
+        if (this.supportsPerfMark) {
+            var entry = this.getMeasurementForGivenName(metricName);
+            if (entry && entry.entryType !== "measure") {
+                return entry.duration;
+            }
+        }
+        var duration = this.metrics[metricName].end - this.metrics[metricName].start;
+        return duration || -1;
+    };
+    /**
+     *
+     */
+    Perfume.prototype.checkMetricName = function (metricName) {
+        if (metricName) {
+            return true;
+        }
+        global.console.warn(this.logPrefix, "Please provide a metric name");
+        return false;
+    };
+    /**
+     *
+     */
+    Perfume.prototype.start = function (metricName) {
+        if (!this.checkMetricName(metricName)) {
+            return;
+        }
+        if (!this.supportsPerfMark) {
+            global.console.warn(this.logPrefix, "Timeline won\"t be marked for \"" + metricName + "\".");
+        }
+        if (this.metrics[metricName]) {
+            global.console.warn(this.logPrefix, "Recording already started.");
+            return;
+        }
+        this.metrics[metricName] = {
+            end: 0,
+            start: performance.now(),
+        };
+        if (this.supportsPerfMark) {
+            performance.mark("mark_" + metricName + "_start");
+        }
+    };
+    /**
+     *
+     */
+    Perfume.prototype.end = function (metricName, log) {
+        if (log === void 0) { log = false; }
+        if (!this.checkMetricName(metricName)) {
+            return;
+        }
+        if (!this.metrics[metricName]) {
+            global.console.warn(this.logPrefix, "Recording already stopped.");
+            return;
+        }
+        this.metrics[metricName].end = performance.now();
+        if (this.supportsPerfMark) {
+            var startMark = "mark_" + metricName + "_start";
+            var endMark = "mark_" + metricName + "_end";
+            performance.mark(endMark);
+            performance.measure(metricName, startMark, endMark);
+        }
+        var duration = this.getDurationByMetric(metricName);
+        if (log) {
+            this.log(metricName, duration);
+        }
+        delete this.metrics[metricName];
+        return duration;
+    };
+    /**
+     * http://msdn.microsoft.com/ff974719
+     */
+    Perfume.prototype.getFirstPaint = function () {
+        if (performance) {
+            var navTiming = performance.timing;
+            if (navTiming && navTiming.navigationStart !== 0) {
+                return Date.now() - navTiming.navigationStart;
+            }
+        }
+        return 0;
+    };
+    /**
+     * First Paint is essentially the paint after which
+     * the biggest above-the-fold layout change has happened.
+     */
+    Perfume.prototype.firstPaint = function () {
+        var _this = this;
+        setTimeout(function () {
+            _this.firstPaintDuration = _this.getFirstPaint();
+            if (_this.firstPaintDuration) {
+                _this.log("firstPaint", _this.firstPaintDuration);
+            }
+        });
+    };
+    /**
+     * Coloring Text in Browser Console
+     */
+    Perfume.prototype.log = function (metricName, duration) {
+        if (!metricName || !duration) {
+            global.console.warn(this.logPrefix, "Please provide a metric name and the duration value");
+            return;
+        }
+        var durationMs = duration.toFixed(2);
+        var style = "color: #ff6d00;font-size:12px;";
+        var text = "%c " + this.logPrefix + " " + metricName + " " + durationMs + " ms";
+        global.console.log(text, style);
+    };
+    return Perfume;
+}());
+
+/* harmony default export */ __webpack_exports__["a"] = (Perfume);
+//# sourceMappingURL=perfume.es5.js.map
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("../../../../webpack/buildin/global.js")))
+
+/***/ }),
+
 /***/ "../../../../rxjs/_esm5/InnerSubscriber.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
