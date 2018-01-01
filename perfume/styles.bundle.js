@@ -1,33 +1,5 @@
 webpackJsonp(["styles"],{
 
-/***/ "../../../../../src/assets/DancingScript-Regular-webfont.eot":
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "DancingScript-Regular-webfont.c3731d39f98e91f06c3a.eot";
-
-/***/ }),
-
-/***/ "../../../../../src/assets/DancingScript-Regular-webfont.svg":
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "DancingScript-Regular-webfont.2841803be3f68371d9a7.svg";
-
-/***/ }),
-
-/***/ "../../../../../src/assets/DancingScript-Regular-webfont.ttf":
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "DancingScript-Regular-webfont.845b9abec19cbc5c6e21.ttf";
-
-/***/ }),
-
-/***/ "../../../../../src/assets/DancingScript-Regular-webfont.woff":
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "DancingScript-Regular-webfont.d9aaa3c73a720a252f71.woff";
-
-/***/ }),
-
 /***/ "../../../../../src/styles.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -63,7 +35,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "body {\n  background-color: #FDFBFA;\n  color: #141414;\n  margin: 0;\n  padding: 0;\n  text-align: center;\n  font-family: 'Open Sans', sans-serif;\n  font-size: 17px;\n  font-weight: 300;\n  line-height: 1.6;\n}\n\n@font-face {\n  font-family: 'DancingScript';\n  src: url(" + __webpack_require__("../../../../../src/assets/DancingScript-Regular-webfont.eot") + ");\n  src: url(" + __webpack_require__("../../../../../src/assets/DancingScript-Regular-webfont.eot") + "?#iefix) format('embedded-opentype'),\n       url(" + __webpack_require__("../../../../../src/assets/DancingScript-Regular-webfont.woff") + ") format('woff'),\n       url(" + __webpack_require__("../../../../../src/assets/DancingScript-Regular-webfont.ttf") + ") format('truetype'),\n       url(" + __webpack_require__("../../../../../src/assets/DancingScript-Regular-webfont.svg") + "#DancingScriptOTRegular) format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n\na {\n  color: #366fd1;\n  text-decoration: none;\n}\n\na:hover {\n  text-decoration: underline;\n}\n\nh1, h2, h3, h4, h5, h6 {\n  font-weight: 300;\n  line-height: 1.4;\n  margin: 1em 0 0.2em;\n  color: #8A7A75;\n}\n\nh1 {\n  margin: 6px 0 4px;\n  color: #F2DB77;\n  font-family: 'DancingScript', 'Helvetica Neue', Arial, sans-serif;\n  font-size: 70px;\n  font-weight: 400;\n}\n\nh2 {\n  font-size: 1.8em;\n  margin: 0.7em 0 0.3em;\n}\n\nh3 {\n  font-size: 1.6em;\n  margin: 0.7em 0 0.38em;\n}\n\nh4 {\n  font-size: 1.4em;\n margin: 0.7em 0 0.43em;\n}\n\nh5 {\n  font-size: 1.2em;\n  margin: 0.7em 0 0.5em;\n}\n\nh6 {\n  font-size: 1.1em;\n  margin: 1.4em 0 0.55em;\n}\n\nh1 + h1, h1 + h2, h1 + h3, h1 + h4, h1 + h5, h1 + h6,\nh2 + h1, h2 + h2, h2 + h3, h2 + h4, h2 + h5, h2 + h6,\nh3 + h1, h3 + h2, h3 + h3, h3 + h4, h3 + h5, h3 + h6,\nh4 + h1, h4 + h2, h4 + h3, h4 + h4, h4 + h5, h4 + h6,\nh5 + h1, h5 + h2, h5 + h3, h5 + h4, h5 + h5, h5 + h6,\nh6 + h1, h6 + h2, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {\n  margin-top: 0;\n}\n\nblockquote,\nblockquote cite,\nol,\np,\npre,\nul {\n  margin: 0.6em 0;\n}\n\nblockquote {\n  border-left: 4px solid #bbb;\n  padding: 1px 14px;\n}\n\nblockquote cite {\n  display: block;\n}\n\nblockquote cite:before {\n  content: '\\2014   ';\n}\n\nol ol,\nul ul,\nol ul,\nul ol {\n  margin: 0;\n}\n\nul {\n  list-style: disc;\n  padding: 0 0 0 26px;\n}\n\nol {\n  list-style: decimal;\n}\n\nol ul,\nul ul {\n  padding: 0 0 0 18px;\n}\n\nul ol,\nol ol {\n  padding: 0 0 0 34px;\n}\n\nul li,\nol li {\n  margin: 5px 0;\n}\n\nstrong, b {\n  font-weight: 400;\n}\n\n.Box {\n  margin: 40px 0;\n  text-align: left;\n}\n\n.Box--first {\n  margin: 0 0 60px;\n}\n\n.Title {\n  position: relative;\n}\n\n.Layout .Content,\n.Layout .Footer {\n  padding: 32px;\n  max-width: 700px;\n  margin: 0 auto;\n}\n\n.Layout .Footer {\n  padding-top: 0;\n}\n\n.Layout .Footer {\n  color: #636363;\n  font-size: 12px;\n  text-align: center;\n}\n\n.Picture {\n  border-radius: 250px;\n  margin-top: 30px;\n  width: 250px;\n}\n\n.Teapotio-logo,\n.Teapotio-symfonyLogo,\n.TwitterLogo,\n.PlanLogo {\n  margin: 15px 0;\n  width: 100px;\n}\n\n.Teapotio {\n  color: #343434;\n  font-size: 80px;\n  line-height: 1;\n}\n\n.Teapotio > * {\n  display: inline-block;\n  vertical-align: middle;\n}\n\n.ExternalLinkIcon {\n  display: inline-block;\n  font-size: 2em;\n  vertical-align: middle;\n}\n\n.Demo {\n  width: 100%;\n  text-align: left;\n}\n\n.Button {\n  display: inline-block;\n  background-color: #F5D7CD;\n  border-color: #DDBDB6;\n  color: #8A7A75;\n  font-weight: 500;\n  line-height: 1.25;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  border: 1px solid transparent;\n  padding: 5px 12px;\n  margin-right: 20px;\n  font-size: 16px;\n  border-radius: .25rem;\n  cursor: pointer;\n  transition: all .3s ease-in-out;\n}\n\n.Button:hover {\n  color: #FDFBFA;\n  background-color: #F7E7A1;\n  border-color: #F2DB77;\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: #FDFBFA;\n  color: #141414;\n  margin: 0;\n  padding: 0;\n  text-align: center;\n  font-family: 'Open Sans', sans-serif;\n  font-size: 17px;\n  font-weight: 300;\n  line-height: 1.6;\n}\n\na {\n  color: #366fd1;\n  text-decoration: none;\n}\n\na:hover {\n  text-decoration: underline;\n}\n\nh1, h2, h3, h4, h5, h6 {\n  font-weight: 300;\n  line-height: 1.4;\n  margin: 1em 0 0.2em;\n  color: #8A7A75;\n}\n\nh1 {\n  margin: 6px 0 4px;\n  font-size: 70px;\n  font-weight: 400;\n}\n\nh2 {\n  font-size: 1.8em;\n  margin: 0.7em 0 0.3em;\n}\n\nh3 {\n  font-size: 1.6em;\n  margin: 0.7em 0 0.38em;\n}\n\nh4 {\n  font-size: 1.4em;\n margin: 0.7em 0 0.43em;\n}\n\nh5 {\n  font-size: 1.2em;\n  margin: 0.7em 0 0.5em;\n}\n\nh6 {\n  font-size: 1.1em;\n  margin: 1.4em 0 0.55em;\n}\n\nh1 + h1, h1 + h2, h1 + h3, h1 + h4, h1 + h5, h1 + h6,\nh2 + h1, h2 + h2, h2 + h3, h2 + h4, h2 + h5, h2 + h6,\nh3 + h1, h3 + h2, h3 + h3, h3 + h4, h3 + h5, h3 + h6,\nh4 + h1, h4 + h2, h4 + h3, h4 + h4, h4 + h5, h4 + h6,\nh5 + h1, h5 + h2, h5 + h3, h5 + h4, h5 + h5, h5 + h6,\nh6 + h1, h6 + h2, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {\n  margin-top: 0;\n}\n\nblockquote,\nblockquote cite,\nol,\np,\npre,\nul {\n  margin: 0.6em 0;\n}\n\nblockquote {\n  border-left: 4px solid #bbb;\n  padding: 1px 14px;\n}\n\nblockquote cite {\n  display: block;\n}\n\nblockquote cite:before {\n  content: '\\2014   ';\n}\n\nol ol,\nul ul,\nol ul,\nul ol {\n  margin: 0;\n}\n\nul {\n  list-style: disc;\n  padding: 0 0 0 26px;\n}\n\nol {\n  list-style: decimal;\n}\n\nol ul,\nul ul {\n  padding: 0 0 0 18px;\n}\n\nul ol,\nol ol {\n  padding: 0 0 0 34px;\n}\n\nul li,\nol li {\n  margin: 5px 0;\n}\n\nstrong, b {\n  font-weight: 400;\n}\n", ""]);
 
 // exports
 

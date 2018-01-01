@@ -7,6 +7,10 @@ webpackJsonp(["vendor"],{
 /* WEBPACK VAR INJECTION */(function(global) {var Perfume = /** @class */ (function () {
     function Perfume() {
         this.firstPaintDuration = 0;
+        this.googleAnalytics = {
+            category: "name",
+            enable: false,
+        };
         this.metrics = {};
         this.logPrefix = "⚡️ Perfume.js:";
         if (!this.supportsPerfNow) {
@@ -39,6 +43,7 @@ webpackJsonp(["vendor"],{
     /**
      * This assumes the user has made only one measurement for the given
      * name. Return the first PerformanceEntry objects for the given name.
+     * @param {string} metricName
      */
     Perfume.prototype.getMeasurementForGivenName = function (metricName) {
         return performance.getEntriesByName(metricName)[0];
@@ -47,6 +52,7 @@ webpackJsonp(["vendor"],{
      * Get the duration of the timing metric or -1 if there a measurement has
      * not been made. Use User Timing API results if available, otherwise return
      * performance.now() fallback.
+     * @param {string} metricName
      */
     Perfume.prototype.getDurationByMetric = function (metricName) {
         if (this.supportsPerfMark) {
@@ -59,7 +65,7 @@ webpackJsonp(["vendor"],{
         return duration || -1;
     };
     /**
-     *
+     * @param {string} metricName
      */
     Perfume.prototype.checkMetricName = function (metricName) {
         if (metricName) {
@@ -69,7 +75,7 @@ webpackJsonp(["vendor"],{
         return false;
     };
     /**
-     *
+     * @param {string} metricName
      */
     Perfume.prototype.start = function (metricName) {
         if (!this.checkMetricName(metricName)) {
@@ -91,7 +97,8 @@ webpackJsonp(["vendor"],{
         }
     };
     /**
-     *
+     * @param {string} metricName
+     * @param {boolean} log
      */
     Perfume.prototype.end = function (metricName, log) {
         if (log === void 0) { log = false; }
@@ -114,6 +121,7 @@ webpackJsonp(["vendor"],{
             this.log(metricName, duration);
         }
         delete this.metrics[metricName];
+        this.sendTiming(metricName, duration);
         return duration;
     };
     /**
@@ -139,10 +147,13 @@ webpackJsonp(["vendor"],{
             if (_this.firstPaintDuration) {
                 _this.log("firstPaint", _this.firstPaintDuration);
             }
+            _this.sendTiming("firstPaint", _this.firstPaintDuration);
         });
     };
     /**
      * Coloring Text in Browser Console
+     * @param {string} metricName
+     * @param {number} duration
      */
     Perfume.prototype.log = function (metricName, duration) {
         if (!metricName || !duration) {
@@ -153,6 +164,22 @@ webpackJsonp(["vendor"],{
         var style = "color: #ff6d00;font-size:12px;";
         var text = "%c " + this.logPrefix + " " + metricName + " " + durationMs + " ms";
         global.console.log(text, style);
+    };
+    /**
+     * Sends the User timing measure to Google Analytics
+     * @param {string} metricName
+     * @param {number} duration
+     */
+    Perfume.prototype.sendTiming = function (metricName, duration) {
+        if (!this.googleAnalytics.enable) {
+            return;
+        }
+        if (!window.ga) {
+            global.console.warn(this.logPrefix, "Google Analytics has not been loaded");
+            return;
+        }
+        var durationMs = duration.toFixed(2);
+        window.ga("send", "timing", this.googleAnalytics.category, metricName, durationMs);
     };
     return Perfume;
 }());
