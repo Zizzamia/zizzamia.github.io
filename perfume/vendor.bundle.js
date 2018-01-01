@@ -8,8 +8,8 @@ webpackJsonp(["vendor"],{
     function Perfume() {
         this.firstPaintDuration = 0;
         this.googleAnalytics = {
-            category: "name",
             enable: false,
+            timingVar: "name",
         };
         this.metrics = {};
         this.logPrefix = "⚡️ Perfume.js:";
@@ -166,7 +166,8 @@ webpackJsonp(["vendor"],{
         global.console.log(text, style);
     };
     /**
-     * Sends the User timing measure to Google Analytics
+     * Sends the User timing measure to Google Analytics.
+     * ga('send', 'timing', [timingCategory], [timingVar], [timingValue])
      * @param {string} metricName
      * @param {number} duration
      */
@@ -179,7 +180,7 @@ webpackJsonp(["vendor"],{
             return;
         }
         var durationMs = duration.toFixed(2);
-        window.ga("send", "timing", this.googleAnalytics.category, metricName, durationMs);
+        window.ga("send", "timing", metricName, this.googleAnalytics.timingVar, durationMs);
     };
     return Perfume;
 }());
