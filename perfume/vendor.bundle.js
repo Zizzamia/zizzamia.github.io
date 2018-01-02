@@ -14,7 +14,7 @@ webpackJsonp(["vendor"],{
         this.metrics = {};
         this.logPrefix = "⚡️ Perfume.js:";
         if (!this.supportsPerfNow) {
-            throw Error(this.logPrefix + " Cannot be used in this browser.");
+            global.console.warn(this.logPrefix, "Cannot be used in this browser.");
         }
     }
     Object.defineProperty(Perfume.prototype, "supportsPerfNow", {
@@ -75,6 +75,21 @@ webpackJsonp(["vendor"],{
         return false;
     };
     /**
+     * When performance API available:
+     * - Returns a DOMHighResTimeStamp, measured in milliseconds, accurate to five
+     *   thousandths of a millisecond (5 microseconds).
+     * Otherwise:
+     * - Unlike returns Date.now that is limited to one-millisecond resolution.
+     */
+    Perfume.prototype.performanceNow = function () {
+        if (this.supportsPerfMark) {
+            return window.performance.now();
+        }
+        else {
+            return Date.now() / 1000;
+        }
+    };
+    /**
      * @param {string} metricName
      */
     Perfume.prototype.start = function (metricName) {
@@ -82,7 +97,7 @@ webpackJsonp(["vendor"],{
             return;
         }
         if (!this.supportsPerfMark) {
-            global.console.warn(this.logPrefix, "Timeline won\"t be marked for \"" + metricName + "\".");
+            global.console.warn(this.logPrefix, "Timeline won't be marked for \"" + metricName + "\".");
         }
         if (this.metrics[metricName]) {
             global.console.warn(this.logPrefix, "Recording already started.");
@@ -90,7 +105,7 @@ webpackJsonp(["vendor"],{
         }
         this.metrics[metricName] = {
             end: 0,
-            start: performance.now(),
+            start: this.performanceNow(),
         };
         if (this.supportsPerfMark) {
             performance.mark("mark_" + metricName + "_start");
@@ -109,7 +124,7 @@ webpackJsonp(["vendor"],{
             global.console.warn(this.logPrefix, "Recording already stopped.");
             return;
         }
-        this.metrics[metricName].end = performance.now();
+        this.metrics[metricName].end = this.performanceNow();
         if (this.supportsPerfMark) {
             var startMark = "mark_" + metricName + "_start";
             var endMark = "mark_" + metricName + "_end";
@@ -168,6 +183,9 @@ webpackJsonp(["vendor"],{
     /**
      * Sends the User timing measure to Google Analytics.
      * ga('send', 'timing', [timingCategory], [timingVar], [timingValue])
+     * timingCategory: metricName
+     * timingVar: googleAnalytics.timingVar
+     * timingValue: The value of duration rounded to the nearest integer
      * @param {string} metricName
      * @param {number} duration
      */
@@ -179,8 +197,8 @@ webpackJsonp(["vendor"],{
             global.console.warn(this.logPrefix, "Google Analytics has not been loaded");
             return;
         }
-        var durationMs = duration.toFixed(2);
-        window.ga("send", "timing", metricName, this.googleAnalytics.timingVar, durationMs);
+        var durationInteger = Math.round(duration);
+        window.ga("send", "timing", metricName, this.googleAnalytics.timingVar, durationInteger);
     };
     return Perfume;
 }());
