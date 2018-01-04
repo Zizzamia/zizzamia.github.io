@@ -23,7 +23,7 @@ webpackJsonp(["vendor"],{
          * @type {boolean}
          */
         get: function () {
-            return Boolean(window.performance && performance.now);
+            return window.performance && performance.now ? true : false;
         },
         enumerable: true,
         configurable: true
@@ -35,11 +35,101 @@ webpackJsonp(["vendor"],{
          * @type {boolean}
          */
         get: function () {
-            return Boolean(window.performance && performance.mark);
+            return window.performance && performance.mark ? true : false;
         },
         enumerable: true,
         configurable: true
     });
+    /**
+     * Start performance measurement
+     * @param {string} metricName
+     */
+    Perfume.prototype.start = function (metricName) {
+        if (!this.checkMetricName(metricName)) {
+            return;
+        }
+        if (!this.supportsPerfMark) {
+            global.console.warn(this.logPrefix, "Timeline won't be marked for \"" + metricName + "\".");
+        }
+        if (this.metrics[metricName]) {
+            global.console.warn(this.logPrefix, "Recording already started.");
+            return;
+        }
+        this.metrics[metricName] = {
+            end: 0,
+            start: this.performanceNow(),
+        };
+        this.mark(metricName, "start");
+    };
+    /**
+     * End performance measurement
+     * @param {string} metricName
+     * @param {boolean} log
+     */
+    Perfume.prototype.end = function (metricName, log) {
+        if (log === void 0) { log = false; }
+        if (!this.checkMetricName(metricName)) {
+            return;
+        }
+        if (!this.metrics[metricName]) {
+            global.console.warn(this.logPrefix, "Recording already stopped.");
+            return;
+        }
+        this.metrics[metricName].end = this.performanceNow();
+        this.mark(metricName, "end");
+        this.measure(metricName, "start", "end");
+        var duration = this.getDurationByMetric(metricName);
+        if (log) {
+            this.log(metricName, duration);
+        }
+        delete this.metrics[metricName];
+        this.sendTiming(metricName, duration);
+        return duration;
+    };
+    /**
+     * End performance measurement after first paint from the beging of it
+     * @param {string} metricName
+     * @param {boolean} log
+     */
+    Perfume.prototype.endPaint = function (metricName, log) {
+        var _this = this;
+        if (log === void 0) { log = false; }
+        return new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                var duration = _this.end(metricName, log);
+                resolve(duration);
+            });
+        });
+    };
+    /**
+     * First Paint is essentially the paint after which
+     * the biggest above-the-fold layout change has happened.
+     */
+    Perfume.prototype.firstPaint = function () {
+        var _this = this;
+        setTimeout(function () {
+            _this.firstPaintDuration = _this.getFirstPaint();
+            if (_this.firstPaintDuration) {
+                _this.log("firstPaint", _this.firstPaintDuration);
+            }
+            _this.sendTiming("firstPaint", _this.firstPaintDuration);
+        });
+    };
+    /**
+     * Coloring Text in Browser Console
+     * @param {string} metricName
+     * @param {number} duration
+     */
+    Perfume.prototype.log = function (metricName, duration) {
+        if (!metricName || !duration) {
+            global.console.warn(this.logPrefix, "Please provide a metric name and the duration value");
+            return;
+        }
+        var durationMs = duration.toFixed(2);
+        var style = "color: #ff6d00;font-size:12px;";
+        var text = "%c " + this.logPrefix + " " + metricName + " " + durationMs + " ms";
+        global.console.log(text, style);
+    };
     /**
      * This assumes the user has made only one measurement for the given
      * name. Return the first PerformanceEntry objects for the given name.
@@ -80,6 +170,7 @@ webpackJsonp(["vendor"],{
      *   thousandths of a millisecond (5 microseconds).
      * Otherwise:
      * - Unlike returns Date.now that is limited to one-millisecond resolution.
+     * @type {number}
      */
     Perfume.prototype.performanceNow = function () {
         if (this.supportsPerfMark) {
@@ -91,56 +182,31 @@ webpackJsonp(["vendor"],{
     };
     /**
      * @param {string} metricName
+     * @param {string} type
      */
-    Perfume.prototype.start = function (metricName) {
-        if (!this.checkMetricName(metricName)) {
-            return;
-        }
+    Perfume.prototype.mark = function (metricName, type) {
         if (!this.supportsPerfMark) {
-            global.console.warn(this.logPrefix, "Timeline won't be marked for \"" + metricName + "\".");
-        }
-        if (this.metrics[metricName]) {
-            global.console.warn(this.logPrefix, "Recording already started.");
             return;
         }
-        this.metrics[metricName] = {
-            end: 0,
-            start: this.performanceNow(),
-        };
-        if (this.supportsPerfMark) {
-            performance.mark("mark_" + metricName + "_start");
-        }
+        var mark = "mark_" + metricName + "_" + type;
+        window.performance.mark(mark);
     };
     /**
      * @param {string} metricName
-     * @param {boolean} log
+     * @param {string} startMark
+     * @param {string} endMark
      */
-    Perfume.prototype.end = function (metricName, log) {
-        if (log === void 0) { log = false; }
-        if (!this.checkMetricName(metricName)) {
+    Perfume.prototype.measure = function (metricName, startType, endType) {
+        if (!this.supportsPerfMark) {
             return;
         }
-        if (!this.metrics[metricName]) {
-            global.console.warn(this.logPrefix, "Recording already stopped.");
-            return;
-        }
-        this.metrics[metricName].end = this.performanceNow();
-        if (this.supportsPerfMark) {
-            var startMark = "mark_" + metricName + "_start";
-            var endMark = "mark_" + metricName + "_end";
-            performance.mark(endMark);
-            performance.measure(metricName, startMark, endMark);
-        }
-        var duration = this.getDurationByMetric(metricName);
-        if (log) {
-            this.log(metricName, duration);
-        }
-        delete this.metrics[metricName];
-        this.sendTiming(metricName, duration);
-        return duration;
+        var startMark = "mark_" + metricName + "_" + startType;
+        var endMark = "mark_" + metricName + "_" + endType;
+        window.performance.measure(metricName, startMark, endMark);
     };
     /**
      * http://msdn.microsoft.com/ff974719
+     * https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/navigationStart
      */
     Perfume.prototype.getFirstPaint = function () {
         if (performance) {
@@ -150,35 +216,6 @@ webpackJsonp(["vendor"],{
             }
         }
         return 0;
-    };
-    /**
-     * First Paint is essentially the paint after which
-     * the biggest above-the-fold layout change has happened.
-     */
-    Perfume.prototype.firstPaint = function () {
-        var _this = this;
-        setTimeout(function () {
-            _this.firstPaintDuration = _this.getFirstPaint();
-            if (_this.firstPaintDuration) {
-                _this.log("firstPaint", _this.firstPaintDuration);
-            }
-            _this.sendTiming("firstPaint", _this.firstPaintDuration);
-        });
-    };
-    /**
-     * Coloring Text in Browser Console
-     * @param {string} metricName
-     * @param {number} duration
-     */
-    Perfume.prototype.log = function (metricName, duration) {
-        if (!metricName || !duration) {
-            global.console.warn(this.logPrefix, "Please provide a metric name and the duration value");
-            return;
-        }
-        var durationMs = duration.toFixed(2);
-        var style = "color: #ff6d00;font-size:12px;";
-        var text = "%c " + this.logPrefix + " " + metricName + " " + durationMs + " ms";
-        global.console.log(text, style);
     };
     /**
      * Sends the User timing measure to Google Analytics.
@@ -5419,7 +5456,7 @@ var NgClass = /** @class */ (function () {
                 _this._toggleClass(record.item, true);
             }
             else {
-                throw new Error("NgClass can only toggle CSS classes expressed as strings, got " + Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* ɵstringify */])(record.item));
+                throw new Error("NgClass can only toggle CSS classes expressed as strings, got " + Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_15" /* ɵstringify */])(record.item));
             }
         });
         changes.forEachRemovedItem(function (record) { return _this._toggleClass(record.item, false); });
@@ -7511,7 +7548,7 @@ function convertTimezoneToLocal(date, timezone, reverse) {
  * @return {?}
  */
 function invalidPipeArgumentError(type, value) {
-    return Error("InvalidPipeArgument: '" + value + "' for pipe '" + Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* ɵstringify */])(type) + "'");
+    return Error("InvalidPipeArgument: '" + value + "' for pipe '" + Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_15" /* ɵstringify */])(type) + "'");
 }
 
 /**
@@ -9922,7 +9959,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* Version */]
 /* unused harmony export ɵRenderDebugInfo */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_4", function() { return _global; });
 /* unused harmony export ɵlooseIdentical */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_14", function() { return stringify; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_15", function() { return stringify; });
 /* unused harmony export ɵmakeDecorator */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_6", function() { return isObservable; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_7", function() { return isPromise; });
@@ -9946,16 +9983,16 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* Version */]
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_11", function() { return moduleDef; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_12", function() { return moduleProvideDef; });
 /* unused harmony export ɵncd */
-/* unused harmony export ɵnov */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_13", function() { return nodeValue; });
 /* unused harmony export ɵpid */
 /* unused harmony export ɵprd */
 /* unused harmony export ɵpad */
 /* unused harmony export ɵpod */
 /* unused harmony export ɵppd */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_13", function() { return queryDef; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_15", function() { return textDef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_14", function() { return queryDef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_16", function() { return textDef; });
 /* unused harmony export ɵunv */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_16", function() { return viewDef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_17", function() { return viewDef; });
 /* unused harmony export AUTO_STYLE */
 /* unused harmony export trigger */
 /* unused harmony export animate */
