@@ -35,7 +35,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "body {\n  background-color: #FDFBFA;\n  color: #141414;\n  margin: 0;\n  padding: 0;\n  text-align: center;\n  font-family: 'Open Sans', sans-serif;\n  font-size: 17px;\n  font-weight: 300;\n  line-height: 1.6;\n}\n\na {\n  color: #366fd1;\n  text-decoration: none;\n}\n\na:hover {\n  text-decoration: underline;\n}\n\nh1, h2 {\n  font-weight: 300;\n  line-height: 1.4;\n  margin: 1em 0 0.2em;\n  color: #8A7A75;\n}\n\nh1 {\n  margin: 6px 0 4px;\n  font-size: 70px;\n  font-weight: 400;\n}\n\nh2 {\n  font-size: 1.8em;\n  margin: 0.7em 0 0.3em;\n}\n\nh1 + h1, h1 + h2,\nh2 + h1, h2 + h2 {\n  margin-top: 0;\n}\n\nblockquote,\nblockquote cite,\nol,\np,\npre,\nul {\n  margin: 0.6em 0;\n}\n\nstrong, b {\n  font-weight: 400;\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: #FDFBFA;\n  color: #141414;\n  margin: 0;\n  padding: 0;\n  text-align: center;\n  font-family: \"Helvetica Neue\", Arial, sans-serif;\n  font-size: 17px;\n  font-weight: 300;\n  line-height: 1.6;\n}\n\na {\n  color: #366fd1;\n  text-decoration: none;\n}\n\na:hover {\n  text-decoration: underline;\n}\n\nh1, h2 {\n  font-family: 'Open Sans', sans-serif;\n  font-weight: 300;\n  line-height: 1.4;\n  margin: 1em 0 0.2em;\n  color: #8A7A75;\n}\n\nh1 {\n  margin: 6px 0 4px;\n  font-size: 70px;\n  font-weight: 400;\n}\n\nh2 {\n  font-size: 1.7em;\n  font-weight: 400;\n  margin: 0.7em 0 0;\n}\n\nh1 + h1, h1 + h2,\nh2 + h1, h2 + h2 {\n  margin-top: 0;\n}\n\nblockquote,\nblockquote cite,\nol,\np,\npre,\nul {\n  font-size: 16px;\n  margin: 0 0 10px;\n  font-weight: 400;\n}\n\nstrong, b {\n  font-weight: 400;\n}\n", ""]);
 
 // exports
 
