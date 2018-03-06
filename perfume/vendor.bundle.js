@@ -21,7 +21,7 @@ webpackJsonp(["vendor"],{
      * @param {string} type
      */
     EmulatedPerformance.prototype.mark = function (metricName, type) {
-        global.console.warn(this.config.logPrefix, "Timeline won't be marked for \"" + metricName + "\".");
+        // Timeline won't be marked
     };
     /**
      * @param {string} metricName
@@ -52,7 +52,7 @@ webpackJsonp(["vendor"],{
      */
     EmulatedPerformance.prototype.getDurationByMetric = function (metricName, metrics) {
         var duration = metrics[metricName].end - metrics[metricName].start;
-        return duration || -1;
+        return duration || 0;
     };
     /**
      * http://msdn.microsoft.com/ff974719
@@ -111,6 +111,8 @@ var Performance = /** @class */ (function () {
     /**
      * True if the browser supports the Navigation Timing API,
      * User Timing API and the PerformanceObserver Interface.
+     * In Safari, the User Timing API (performance.mark()) is not available,
+     * so the DevTools timeline will not be annotated with marks.
      * Support: developer.mozilla.org/en-US/docs/Web/API/Performance/mark
      * Support: developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver
      *
@@ -120,6 +122,16 @@ var Performance = /** @class */ (function () {
         return window.performance
             && !!performance.now
             && !!performance.mark;
+    };
+    /**
+     * For now only Chrome fully support the PerformanceObserver interface
+     * and the entryType "paint".
+     * Firefox 58: https://bugzilla.mozilla.org/show_bug.cgi?id=1403027
+     *
+     * @type {boolean}
+     */
+    Performance.supportedPerformanceObserver = function () {
+        return window.chrome;
     };
     /**
      * True if the browser supports the PerformanceLongTaskTiming interface.
@@ -168,8 +180,8 @@ var Performance = /** @class */ (function () {
      * @param {any} cb
      */
     Performance.prototype.firstContentfulPaint = function (cb) {
-        var observer = new PerformanceObserver(this.performanceObserverCb.bind(this, cb));
-        observer.observe({ entryTypes: ["paint"] });
+        this.perfObserver = new PerformanceObserver(this.performanceObserverCb.bind(this, cb));
+        this.perfObserver.observe({ entryTypes: ["paint"] });
     };
     /**
      * Get the duration of the timing metric or -1 if there a measurement has
@@ -199,11 +211,13 @@ var Performance = /** @class */ (function () {
      * @param {PerformanceObserverEntryList} entryList
      */
     Performance.prototype.performanceObserverCb = function (cb, entryList) {
-        for (var _i = 0, _a = entryList.getEntries(); _i < _a.length; _i++) {
-            var performancePaintTiming = _a[_i];
-            if (performancePaintTiming.name === "first-contentful-paint") {
-                cb(performancePaintTiming);
-            }
+        var entries = entryList.getEntries()
+            .filter(function (performancePaintTiming) {
+            return performancePaintTiming.name === "first-contentful-paint";
+        });
+        if (entries.length) {
+            cb(entries[0]);
+            this.perfObserver.disconnect();
         }
     };
     /**
@@ -247,7 +261,13 @@ var Perfume = /** @class */ (function () {
         this.perf = Performance.supported() ? new Performance() : new EmulatedPerformance();
         this.perf.config = this.config;
         // Init First Contentful Paint
-        this.perf.firstContentfulPaint(this.firstContentfulPaintCb.bind(this));
+        if (Performance.supportedPerformanceObserver()) {
+            this.perf.firstContentfulPaint(this.firstContentfulPaintCb.bind(this));
+        }
+        else {
+            this.perfEmulated = new EmulatedPerformance();
+            this.perfEmulated.firstContentfulPaint(this.firstContentfulPaintCb.bind(this));
+        }
     }
     /**
      * Start performance measurement
@@ -312,8 +332,8 @@ var Perfume = /** @class */ (function () {
      * @param {number} duration
      */
     Perfume.prototype.log = function (metricName, duration) {
-        if (!metricName || !duration) {
-            global.console.warn(this.config.logPrefix, "Please provide a metric name and the duration value");
+        if (!metricName) {
+            global.console.warn(this.config.logPrefix, "Please provide a metric name");
             return;
         }
         var durationMs = duration.toFixed(2);
@@ -339,6 +359,7 @@ var Perfume = /** @class */ (function () {
             this.logFCP(entry.startTime);
         }
         if (Performance.supported()
+            && Performance.supportedPerformanceObserver()
             && Performance.supportedLongTask()
             && this.config.timeToInteractive) {
             this.perf.timeToInteractive(entry.startTime, this.timeToInteractiveCb.bind(this));
