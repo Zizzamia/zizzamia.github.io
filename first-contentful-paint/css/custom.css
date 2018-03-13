@@ -153,6 +153,12 @@ article.shoes::before {
   filter: blur(0.15px) grayscale(0.3);
   background-image: url("../img/shoes.gif");
 }
+article.ouch::before {
+  -webkit-filter: blur(0.15px) grayscale(0.3);
+  -moz-filter: blur(0.15px) grayscale(0.3);
+  filter: blur(0.15px) grayscale(0.3);
+  background-image: url("../img/ouch.gif");
+}
 article.happy-face::before {
   -webkit-filter: blur(0.15px) grayscale(0.3);
   -moz-filter: blur(0.15px) grayscale(0.3);
@@ -182,7 +188,8 @@ twitterwidget {
 .toaster .bespoke-slide,
 .toaster-pick .bespoke-slide,
 .practice .bespoke-slide,
-.shoes .bespoke-slide {
+.shoes .bespoke-slide,
+.ouch .bespoke-slide {
   margin-top: -1.4em;
   -webkit-box-align: center;
   -moz-box-align: center;
