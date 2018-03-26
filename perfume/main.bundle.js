@@ -1,6 +1,6 @@
 webpackJsonp(["main"],{
 
-/***/ "../../../../../src/$$_lazy_route_resource lazy recursive":
+/***/ "./src/$$_lazy_route_resource lazy recursive":
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -13,11 +13,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy recursive";
+webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.component.css.shim.ngstyle.js":
+/***/ "./src/app/app.component.css.shim.ngstyle.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28,13 +28,13 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy re
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
  * tslint:disable
  */ 
-var styles = [".layout[_ngcontent-%COMP%] {\n  height: 100vh;\n  margin: 0 auto;\n  padding: 10px 32px 32px;\n  overflow-y: auto;\n  scroll-behavior: smooth;\n\n  -webkit-overflow-scrolling: touch;\n}\n\n.layout__content[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\n  color: #CAA29B;\n}\n\n.layout__content[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover {\n  color: #B08881;\n}\n\n.layout__nav[_ngcontent-%COMP%] {\n  display: none;\n  padding: 0 0 0 20px;\n  font-size: 16px;\n  color: #222;\n}\n\n.layout__nav[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\n  display: block;\n  padding: 5px 10px;\n  border-left: 2px solid transparent;\n  line-height: 20px;\n  text-decoration: none;\n}\n\n.layout__nav[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover, .layout__nav[_ngcontent-%COMP%]   a.active[_ngcontent-%COMP%] {\n  background: rgba(246, 225, 113, 0.3);\n  border-left-color: rgba(227, 187, 180, 0.8);\n}\n\n.title[_ngcontent-%COMP%] {\n  margin: 0;\n  padding: 9px 0;\n  font-family: \"Dancing Script\", cursive;\n  font-size: 70px;\n  font-weight: 400;\n  text-align: center;\n  color: #f2db77;\n}\n\n\n.box[_ngcontent-%COMP%] {\n  overflow: hidden;\n  margin: 60px 0;\n  text-align: left;\n}\n\n.box--intro[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  margin: 10px 0;\n  line-height: 30px;\n}\n\n.box__title[_ngcontent-%COMP%] {\n  margin: 0;\n  padding: 0 0 20px;\n  font-size: 30px;\n  font-weight: 400;\n  line-height: 40px;\n}\n\n.box__img[_ngcontent-%COMP%] {\n  width: 700px;\n  border: 1px solid #ccc;\n  margin: 0 auto;\n  display: block;\n  border-radius: 2px;\n}\n\n.logo[_ngcontent-%COMP%] {\n  display: block;\n  width: 262px;\n  margin: auto;\n}\n\n.box__demo[_ngcontent-%COMP%] {\n  margin: 10px 0;\n  padding: 10px;\n  border-left: 2px solid rgba(227, 187, 180, 0.8);\n  border-radius: 2px;\n  background: rgba(246, 225, 113, 0.3);\n}\n\n.box__demo__btn[_ngcontent-%COMP%] {\n  transition: all 0.3s;\n\n  margin-right: 20px;\n  padding: 5px 12px;\n  border: 1px solid #ddbdb6;\n  border-radius: 0.25rem;\n  line-height: 1.25;\n  text-align: center;\n  font-weight: 500;\n  font-size: 16px;\n  cursor: pointer;\n  background: #f5d7cd;\n  color: #8a7a75;\n}\n\n.box__demo__btn[_ngcontent-%COMP%]:hover {\n  border-color: #f2db77;\n  background: #f7e7a1;\n  color: #fdfbfa;\n}\n\n.Teapotio-logo[_ngcontent-%COMP%], .Teapotio-symfonyLogo[_ngcontent-%COMP%], .TwitterLogo[_ngcontent-%COMP%], .PlanLogo[_ngcontent-%COMP%] {\n  margin: 15px 0;\n  width: 100px;\n}\n\n@media (min-width: 640px) {\n  .logo[_ngcontent-%COMP%] {\n    float: left;\n  }\n\n  .title[_ngcontent-%COMP%] {\n    text-align: left;\n  }\n}\n\n@media (min-width: 960px) {\n  .layout[_ngcontent-%COMP%] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n  }\n\n  .layout__nav[_ngcontent-%COMP%] {\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n\n    display: block;\n    position: -webkit-sticky;\n    position: sticky;\n    top: 10px;\n  }\n\n  .layout__content[_ngcontent-%COMP%] {\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n\n    max-width: 700px;\n  }\n}"];
+var styles = [".layout[_ngcontent-%COMP%] {\n  height: 100vh;\n  margin: 0 auto;\n  padding: 10px 32px 32px;\n  overflow-y: auto;\n  scroll-behavior: smooth;\n\n  -webkit-overflow-scrolling: touch;\n}\n\n.layout__content[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\n  color: #CAA29B;\n}\n\n.layout__content[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover {\n  color: #B08881;\n}\n\n.layout__nav[_ngcontent-%COMP%] {\n  display: none;\n  padding: 0 0 0 20px;\n  font-size: 16px;\n  color: #222;\n}\n\n.layout__nav[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\n  display: block;\n  padding: 5px 10px;\n  border-left: 2px solid transparent;\n  line-height: 20px;\n  text-decoration: none;\n}\n\n.layout__nav[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover, .layout__nav[_ngcontent-%COMP%]   a.active[_ngcontent-%COMP%] {\n  background: rgba(246, 225, 113, 0.3);\n  border-left-color: rgba(227, 187, 180, 0.8);\n}\n\n.title[_ngcontent-%COMP%] {\n  margin: 0;\n  padding: 9px 0;\n  font-family: \"Dancing Script\", cursive;\n  font-size: 70px;\n  font-weight: 400;\n  text-align: center;\n  color: #f2db77;\n}\n\n\n\n.box[_ngcontent-%COMP%] {\n  overflow: hidden;\n  margin: 60px 0;\n  text-align: left;\n}\n\n.box--intro[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  margin: 10px 0;\n  line-height: 30px;\n}\n\n.box__title[_ngcontent-%COMP%] {\n  margin: 0;\n  padding: 0 0 20px;\n  font-size: 30px;\n  font-weight: 400;\n  line-height: 40px;\n}\n\n.box__img[_ngcontent-%COMP%] {\n  width: 700px;\n  border: 1px solid #ccc;\n  margin: 0 auto;\n  display: block;\n  border-radius: 2px;\n}\n\n.logo[_ngcontent-%COMP%] {\n  display: block;\n  width: 262px;\n  margin: auto;\n}\n\n.box__demo[_ngcontent-%COMP%] {\n  margin: 10px 0;\n  padding: 10px;\n  border-left: 2px solid rgba(227, 187, 180, 0.8);\n  border-radius: 2px;\n  background: rgba(246, 225, 113, 0.3);\n}\n\n.box__demo__btn[_ngcontent-%COMP%] {\n  -webkit-transition: all 0.3s;\n  transition: all 0.3s;\n\n  margin-right: 20px;\n  padding: 5px 12px;\n  border: 1px solid #ddbdb6;\n  border-radius: 0.25rem;\n  line-height: 1.25;\n  text-align: center;\n  font-weight: 500;\n  font-size: 16px;\n  cursor: pointer;\n  background: #f5d7cd;\n  color: #8a7a75;\n}\n\n.box__demo__btn[_ngcontent-%COMP%]:hover {\n  border-color: #f2db77;\n  background: #f7e7a1;\n  color: #fdfbfa;\n}\n\n.Teapotio-logo[_ngcontent-%COMP%], .Teapotio-symfonyLogo[_ngcontent-%COMP%], .TwitterLogo[_ngcontent-%COMP%], .PlanLogo[_ngcontent-%COMP%] {\n  margin: 15px 0;\n  width: 100px;\n}\n\n@media (min-width: 640px) {\n  .logo[_ngcontent-%COMP%] {\n    float: left;\n  }\n\n  .title[_ngcontent-%COMP%] {\n    text-align: left;\n  }\n}\n\n@media (min-width: 960px) {\n  .layout[_ngcontent-%COMP%] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n  }\n\n  .layout__nav[_ngcontent-%COMP%] {\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n\n    display: block;\n    position: -webkit-sticky;\n    position: sticky;\n    top: 10px;\n  }\n\n  .layout__content[_ngcontent-%COMP%] {\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n\n    max-width: 700px;\n  }\n}"];
 
 
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.component.ngfactory.js":
+/***/ "./src/app/app.component.ngfactory.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -42,11 +42,11 @@ var styles = [".layout[_ngcontent-%COMP%] {\n  height: 100vh;\n  margin: 0 auto;
 /* unused harmony export View_AppComponent_0 */
 /* unused harmony export View_AppComponent_Host_0 */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponentNgFactory; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_component_css_shim_ngstyle__ = __webpack_require__("../../../../../src/app/app.component.css.shim.ngstyle.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__gist_gist_component_ngfactory__ = __webpack_require__("../../../../../src/app/gist/gist.component.ngfactory.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__gist_gist_component__ = __webpack_require__("../../../../../src/app/gist/gist.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_component_css_shim_ngstyle__ = __webpack_require__("./src/app/app.component.css.shim.ngstyle.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__gist_gist_component_ngfactory__ = __webpack_require__("./src/app/gist/gist.component.ngfactory.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__gist_gist_component__ = __webpack_require__("./src/app/gist/gist.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("./src/app/app.component.ts");
 /**
  * @fileoverview This file was generated by the Angular template compiler. Do not edit.
  *
@@ -100,7 +100,7 @@ function View_AppComponent_0(_l) { return __WEBPACK_IMPORTED_MODULE_1__angular_c
     } return ad; }, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["_17" /* ɵted */](-1, null, ["Default Options"])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["_17" /* ɵted */](-1, null, ["\n      "])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["_2" /* ɵeld */](308, 0, null, null, 1, "a", [], [[8, "href", 4], [2, "active", null]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (_co.activeNav(_co.navOptions.copyright) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["_17" /* ɵted */](-1, null, ["Copyright and licenses"])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["_17" /* ɵted */](-1, null, ["\n    "])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["_17" /* ɵted */](-1, null, ["\n  "])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["_17" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var currVal_2 = "Zizzamia/6ab4c33d749ae74d240ebace2cf944f8"; _ck(_v, 91, 0, currVal_2); var currVal_4 = "Zizzamia/15e965213aa87a5588a6756fef612f45"; _ck(_v, 112, 0, currVal_4); var currVal_6 = "Zizzamia/9c971fb35b898871953cc272924ce58d"; _ck(_v, 145, 0, currVal_6); var currVal_8 = "Zizzamia/e680d4f2f9f2bf9ba15b13207264f7bc"; _ck(_v, 172, 0, currVal_8); var currVal_11 = "Zizzamia/ee3ec5ab7bb04822ff7535d18c7d9e96"; _ck(_v, 198, 0, currVal_11); var currVal_14 = "Zizzamia/b16edc8b4052ac4186ebc62151de7dca"; _ck(_v, 221, 0, currVal_14); var currVal_15 = "Zizzamia/221227bf333b0f6304a89fcd4f7038c4"; _ck(_v, 242, 0, currVal_15); var currVal_17 = "Zizzamia/1312530a3a680757604e0bf61fe33862"; _ck(_v, 256, 0, currVal_17); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "assets/perfume-logo-v0-6-5.png"); _ck(_v, 6, 0, currVal_0); var currVal_1 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "assets/perf-metrics-load-timeline.png"); _ck(_v, 76, 0, currVal_1); var currVal_3 = _co.perfume.firstContentfulPaintDuration.toFixed(2); _ck(_v, 109, 0, currVal_3); var currVal_5 = _co.perfume.timeToInteractiveDuration.toFixed(2); _ck(_v, 142, 0, currVal_5); var currVal_7 = _co.logFibonacci; _ck(_v, 168, 0, currVal_7); var currVal_9 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "assets/performance-mark.png"); _ck(_v, 174, 0, currVal_9); var currVal_10 = _co.logTogglePopover; _ck(_v, 194, 0, currVal_10); var currVal_12 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "assets/performance-cfp.png"); _ck(_v, 200, 0, currVal_12); var currVal_13 = _co.logCustom; _ck(_v, 217, 0, currVal_13); var currVal_16 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "assets/performance-analytics.png"); _ck(_v, 244, 0, currVal_16); var currVal_18 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "#/home/"); var currVal_19 = (_co.navSelected === _co.navOptions.home); _ck(_v, 281, 0, currVal_18, currVal_19); var currVal_20 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "#/user-centric-metrics/"); var currVal_21 = (_co.navSelected === _co.navOptions.userCentric); _ck(_v, 284, 0, currVal_20, currVal_21); var currVal_22 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "#/installing-and-imports/"); var currVal_23 = (_co.navSelected === _co.navOptions.installing); _ck(_v, 287, 0, currVal_22, currVal_23); var currVal_24 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "#/time-to-interactive/"); var currVal_25 = (_co.navSelected === _co.navOptions.tti); _ck(_v, 290, 0, currVal_24, currVal_25); var currVal_26 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "#/annotate-metrics/"); var currVal_27 = (_co.navSelected === _co.navOptions.annotate); _ck(_v, 293, 0, currVal_26, currVal_27); var currVal_28 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "#/component-first-paint/"); var currVal_29 = (_co.navSelected === _co.navOptions.cfp); _ck(_v, 296, 0, currVal_28, currVal_29); var currVal_30 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "#/custom-logging/"); var currVal_31 = (_co.navSelected === _co.navOptions.log); _ck(_v, 299, 0, currVal_30, currVal_31); var currVal_32 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "#/google-analytics/"); var currVal_33 = (_co.navSelected === _co.navOptions.ga); _ck(_v, 302, 0, currVal_32, currVal_33); var currVal_34 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "#/default-options/"); var currVal_35 = (_co.navSelected === _co.navOptions.options); _ck(_v, 305, 0, currVal_34, currVal_35); var currVal_36 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "#/copyright-and-license/"); var currVal_37 = (_co.navSelected === _co.navOptions.copyright); _ck(_v, 308, 0, currVal_36, currVal_37); }); }
+    } return ad; }, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["_17" /* ɵted */](-1, null, ["Copyright and licenses"])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["_17" /* ɵted */](-1, null, ["\n    "])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["_17" /* ɵted */](-1, null, ["\n  "])), (_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["_17" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var currVal_2 = "Zizzamia/6ab4c33d749ae74d240ebace2cf944f8"; _ck(_v, 91, 0, currVal_2); var currVal_4 = "Zizzamia/15e965213aa87a5588a6756fef612f45"; _ck(_v, 112, 0, currVal_4); var currVal_6 = "Zizzamia/9c971fb35b898871953cc272924ce58d"; _ck(_v, 145, 0, currVal_6); var currVal_8 = "Zizzamia/e680d4f2f9f2bf9ba15b13207264f7bc"; _ck(_v, 172, 0, currVal_8); var currVal_11 = "Zizzamia/ee3ec5ab7bb04822ff7535d18c7d9e96"; _ck(_v, 198, 0, currVal_11); var currVal_14 = "Zizzamia/b16edc8b4052ac4186ebc62151de7dca"; _ck(_v, 221, 0, currVal_14); var currVal_15 = "Zizzamia/221227bf333b0f6304a89fcd4f7038c4"; _ck(_v, 242, 0, currVal_15); var currVal_17 = "Zizzamia/1312530a3a680757604e0bf61fe33862"; _ck(_v, 256, 0, currVal_17); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "assets/perfume-logo-v0-6-6.png"); _ck(_v, 6, 0, currVal_0); var currVal_1 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "assets/perf-metrics-load-timeline.png"); _ck(_v, 76, 0, currVal_1); var currVal_3 = _co.perfume.firstContentfulPaintDuration.toFixed(2); _ck(_v, 109, 0, currVal_3); var currVal_5 = _co.perfume.timeToInteractiveDuration.toFixed(2); _ck(_v, 142, 0, currVal_5); var currVal_7 = _co.logFibonacci; _ck(_v, 168, 0, currVal_7); var currVal_9 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "assets/performance-mark.png"); _ck(_v, 174, 0, currVal_9); var currVal_10 = _co.logTogglePopover; _ck(_v, 194, 0, currVal_10); var currVal_12 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "assets/performance-cfp.png"); _ck(_v, 200, 0, currVal_12); var currVal_13 = _co.logCustom; _ck(_v, 217, 0, currVal_13); var currVal_16 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "assets/performance-analytics.png"); _ck(_v, 244, 0, currVal_16); var currVal_18 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "#/home/"); var currVal_19 = (_co.navSelected === _co.navOptions.home); _ck(_v, 281, 0, currVal_18, currVal_19); var currVal_20 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "#/user-centric-metrics/"); var currVal_21 = (_co.navSelected === _co.navOptions.userCentric); _ck(_v, 284, 0, currVal_20, currVal_21); var currVal_22 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "#/installing-and-imports/"); var currVal_23 = (_co.navSelected === _co.navOptions.installing); _ck(_v, 287, 0, currVal_22, currVal_23); var currVal_24 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "#/time-to-interactive/"); var currVal_25 = (_co.navSelected === _co.navOptions.tti); _ck(_v, 290, 0, currVal_24, currVal_25); var currVal_26 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "#/annotate-metrics/"); var currVal_27 = (_co.navSelected === _co.navOptions.annotate); _ck(_v, 293, 0, currVal_26, currVal_27); var currVal_28 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "#/component-first-paint/"); var currVal_29 = (_co.navSelected === _co.navOptions.cfp); _ck(_v, 296, 0, currVal_28, currVal_29); var currVal_30 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "#/custom-logging/"); var currVal_31 = (_co.navSelected === _co.navOptions.log); _ck(_v, 299, 0, currVal_30, currVal_31); var currVal_32 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "#/google-analytics/"); var currVal_33 = (_co.navSelected === _co.navOptions.ga); _ck(_v, 302, 0, currVal_32, currVal_33); var currVal_34 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "#/default-options/"); var currVal_35 = (_co.navSelected === _co.navOptions.options); _ck(_v, 305, 0, currVal_34, currVal_35); var currVal_36 = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* ɵinlineInterpolate */](1, "", _co.path, "#/copyright-and-license/"); var currVal_37 = (_co.navSelected === _co.navOptions.copyright); _ck(_v, 308, 0, currVal_36, currVal_37); }); }
 function View_AppComponent_Host_0(_l) { return __WEBPACK_IMPORTED_MODULE_1__angular_core__["_18" /* ɵvid */](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_1__angular_core__["_2" /* ɵeld */](0, 0, null, null, 1, "app-root", [], null, null, null, View_AppComponent_0, RenderType_AppComponent)), __WEBPACK_IMPORTED_MODULE_1__angular_core__["_1" /* ɵdid */](1, 4243456, null, 0, __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */], [__WEBPACK_IMPORTED_MODULE_1__angular_core__["k" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_1__angular_core__["g" /* ChangeDetectorRef */]], null, null)], null, null); }
 var AppComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core__["Y" /* ɵccf */]("app-root", __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */], View_AppComponent_Host_0, {}, {}, []);
 
@@ -108,13 +108,13 @@ var AppComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core__["Y" /* �
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.component.ts":
+/***/ "./src/app/app.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_perfume_js__ = __webpack_require__("../../../../perfume.js/dist/perfume.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_perfume_js__ = __webpack_require__("./node_modules/perfume.js/dist/perfume.es5.js");
 // Angular & Third Party
 
 
@@ -228,17 +228,17 @@ var AppComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.module.ngfactory.js":
+/***/ "./src/app/app.module.ngfactory.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModuleNgFactory; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__("../../../../../src/app/app.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component_ngfactory__ = __webpack_require__("../../../../../src/app/app.component.ngfactory.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__ = __webpack_require__("../../../platform-browser/esm5/platform-browser.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__("./src/app/app.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_component__ = __webpack_require__("./src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component_ngfactory__ = __webpack_require__("./src/app/app.component.ngfactory.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
 /**
  * @fileoverview This file was generated by the Angular template compiler. Do not edit.
  *
@@ -257,7 +257,7 @@ var AppModuleNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["Z" /* ɵcm
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.module.ts":
+/***/ "./src/app/app.module.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -272,7 +272,7 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/gist/gist.component.css.shim.ngstyle.js":
+/***/ "./src/app/gist/gist.component.css.shim.ngstyle.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -289,7 +289,7 @@ var styles = [""];
 
 /***/ }),
 
-/***/ "../../../../../src/app/gist/gist.component.ngfactory.js":
+/***/ "./src/app/gist/gist.component.ngfactory.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -297,9 +297,9 @@ var styles = [""];
 /* harmony export (immutable) */ __webpack_exports__["b"] = View_GistComponent_0;
 /* unused harmony export View_GistComponent_Host_0 */
 /* unused harmony export GistComponentNgFactory */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__gist_component_css_shim_ngstyle__ = __webpack_require__("../../../../../src/app/gist/gist.component.css.shim.ngstyle.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__gist_component__ = __webpack_require__("../../../../../src/app/gist/gist.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__gist_component_css_shim_ngstyle__ = __webpack_require__("./src/app/gist/gist.component.css.shim.ngstyle.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__gist_component__ = __webpack_require__("./src/app/gist/gist.component.ts");
 /**
  * @fileoverview This file was generated by the Angular template compiler. Do not edit.
  *
@@ -320,12 +320,12 @@ var GistComponentNgFactory = __WEBPACK_IMPORTED_MODULE_1__angular_core__["Y" /* 
 
 /***/ }),
 
-/***/ "../../../../../src/app/gist/gist.component.ts":
+/***/ "./src/app/gist/gist.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GistComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 
 var GistComponent = (function () {
     function GistComponent() {
@@ -345,14 +345,14 @@ var GistComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/main.ts":
+/***/ "./src/main.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_app_module_ngfactory__ = __webpack_require__("../../../../../src/app/app.module.ngfactory.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__("../../../platform-browser/esm5/platform-browser.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_app_module_ngfactory__ = __webpack_require__("./src/app/app.module.ngfactory.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
 
 
 
@@ -366,7 +366,7 @@ __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["i" /* platformBrowser *
 /***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("../../../../../src/main.ts");
+module.exports = __webpack_require__("./src/main.ts");
 
 
 /***/ })
