@@ -44,6 +44,12 @@ ul li {
 section h2 {
   line-height: 1.4em;
 }
+section .content {
+  min-width: 60%;
+}
+section img {
+  margin: 0 auto;
+}
 article section.white {
   background-color: #FFF;
   color: #111;
@@ -117,58 +123,56 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 
 
 /* ---- backgrounds ---- */
-article.ciao::before {
-  -webkit-filter: blur(0.15px) grayscale(0.3);
-  -moz-filter: blur(0.15px) grayscale(0.3);
-  filter: blur(0.15px) grayscale(0.3);
-  background-image: url("../img/ciao.gif");
-}
-article.san-francisco-1::before {
+article.san-francisco-1::before,
+article.rum::before,
+article.play::before {
   -webkit-filter: grayscale(0) brightness(1);
   -moz-filter: grayscale(0) brightness(1);
   filter: grayscale(0) brightness(1);
   background-image: url("../img/san-francisco-1.gif");
 }
-article.toaster::before {
-  -webkit-filter: blur(0.15px) grayscale(0.3);
-  -moz-filter: blur(0.15px) grayscale(0.3);
-  filter: blur(0.15px) grayscale(0.3);
+article.rum::before {
+  background-image: url("../img/rum.gif");
+}
+article.play::before {
+  background-image: url("../img/play.gif");
+}
+article.ciao::before,
+article.toaster::before,
+article.toaster-pick::before,
+article.practice::before,
+article.practice-two::before,
+article.polyfill::before,
+article.shoes::before,
+article.ouch::before,
+article.love-you::before {
+  -webkit-filter: grayscale(0) brightness(1);
+  -moz-filter: grayscale(0) brightness(1);
+  filter: grayscale(0) brightness(1);
   background-image: url("../img/toaster.gif");
 }
+article.ciao::before {
+  background-image: url("../img/ciao.gif");
+}
 article.toaster-pick::before {
-  -webkit-filter: blur(0.15px) grayscale(0.3);
-  -moz-filter: blur(0.15px) grayscale(0.3);
-  filter: blur(0.15px) grayscale(0.3);
   background-image: url("../img/toaster-pick.gif");
 }
 article.practice::before {
-  -webkit-filter: blur(0.15px) grayscale(0.3);
-  -moz-filter: blur(0.15px) grayscale(0.3);
-  filter: blur(0.15px) grayscale(0.3);
   background-image: url("../img/practice.gif");
 }
+article.practice-two::before {
+  background-image: url("../img/practice-two.gif");
+}
+article.polyfill::before {
+  background-image: url("../img/polyfill.gif");
+}
 article.shoes::before {
-  -webkit-filter: blur(0.15px) grayscale(0.3);
-  -moz-filter: blur(0.15px) grayscale(0.3);
-  filter: blur(0.15px) grayscale(0.3);
   background-image: url("../img/shoes.gif");
 }
 article.ouch::before {
-  -webkit-filter: blur(0.15px) grayscale(0.3);
-  -moz-filter: blur(0.15px) grayscale(0.3);
-  filter: blur(0.15px) grayscale(0.3);
   background-image: url("../img/ouch.gif");
 }
-article.happy-face::before {
-  -webkit-filter: blur(0.15px) grayscale(0.3);
-  -moz-filter: blur(0.15px) grayscale(0.3);
-  filter: blur(0.15px) grayscale(0.3);
-  background-image: url("../img/happy-face.gif");
-}
 article.love-you::before {
-  -webkit-filter: blur(0.15px) grayscale(0.3);
-  -moz-filter: blur(0.15px) grayscale(0.3);
-  filter: blur(0.15px) grayscale(0.3);
   background-image: url("../img/love-you.gif");
 }
 
@@ -188,8 +192,11 @@ twitterwidget {
 .toaster .bespoke-slide,
 .toaster-pick .bespoke-slide,
 .practice .bespoke-slide,
+.practice-two .bespoke-slide,
+.polyfill .bespoke-slide,
 .shoes .bespoke-slide,
-.ouch .bespoke-slide {
+.ouch .bespoke-slide,
+.play .bespoke-slide {
   margin-top: -1.4em;
   -webkit-box-align: center;
   -moz-box-align: center;
@@ -200,26 +207,37 @@ twitterwidget {
 .love-you .bespoke-slide {
   margin-top: 0.2em;
 }
-.happy-face .bespoke-slide {
-  margin-top: 10%;
+.polyfill .bespoke-slide {
+  margin-top: -9.2em;
+}
+.practice .bespoke-slide,
+.shoes .bespoke-slide {
+  margin-top: 2.6em;
 }
 
 .title .classy {
   font-size: 2em;
 }
 
-.twitter-fix {
+.twitter-fix,
+.article-fix {
   position: fixed;
   bottom: 0.1em;
   left: 0.6em;
   z-index: 22;
 }
+.article-fix {
+  left: inherit;
+  right: 0.6em;
+  width: 50%;
+}
 .twitter-fix svg {
   position: absolute;
   left: 10px;
-  bottom: -3px;
+  bottom: -1px;
 }
-.twitter-fix h5 {
+.twitter-fix h5,
+.article-fix h5 {
   position: absolute;
   left: 44px;
   bottom: 10px;
@@ -228,6 +246,11 @@ twitterwidget {
   height: 1em;
   padding: 0;
   margin: 0;
+}
+.article-fix h5 {
+  left: inherit;
+  right: 44px;
+  font-size: 0.9em;
 }
 
 .profile {

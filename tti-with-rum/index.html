@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="talkApp">
+<html>
 <head>
   <meta charset="utf-8">
   <title>Measuring User-centric performance</title>
@@ -8,12 +8,12 @@
   <link rel="stylesheet" href="css/prism.css">
   <link rel="stylesheet" href="css/custom.css">
 </head>
-<body ng-controller="TalkCtrl">
+<body>
 
   <div class="twitter-fix">
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-    width="40" height="40"
+    width="38" height="38"
     viewBox="0 0 400 400" xml:space="preserve">
     <style type="text/css">
       .st1{fill:#66757f;}
@@ -56,6 +56,41 @@
 
     <section data-bespoke-state="full-text">
       <div class="content">
+        <div class="byline byline--notLine">
+          <div class="classy">
+            <b>Codemotion 2011</b>
+          </div>
+        </div>
+        <blockquote class="twitter-tweet" data-lang="it"><p lang="en" dir="ltr">🔥 BOOM!!! My first <a href="https://twitter.com/angular?ref_src=twsrc%5Etfw">@angular</a> article &quot;The Secret Life(cycle) of Components&quot; <a href="https://t.co/ItPdlUCbOA">https://t.co/ItPdlUCbOA</a></p>&mdash; Leonardo Zizzamia🦉 (@Zizzamia) <a href="https://twitter.com/Zizzamia/status/830447426725085189?ref_src=twsrc%5Etfw">11 febbraio 2017</a></blockquote>
+      </div>
+    </section>
+
+    <section data-bespoke-state="full-text">
+      <div class="content">
+        <div class="byline byline--notLine">
+          <div class="classy">
+            <b>Articles</b>
+          </div>
+        </div>
+        <div class="byline byline--notLine">
+          <div class="classy">
+            <a href="https://www.youtube.com/watch?v=bojG4ua0jVc" target="_blank">
+              Medium one
+            </a>
+          </div>
+        </div>
+        <div class="byline byline--notLine">
+          <div class="classy">
+            <a href="https://www.youtube.com/watch?v=bojG4ua0jVc" target="_blank">
+              Medium two
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section data-bespoke-state="full-text">
+      <div class="content">
         <h2>Key moments</h2>
         <div class="byline">
           <div class="classy">
@@ -77,6 +112,9 @@
             It is delightful
           </div>
         </div>
+        <div class="article-fix">
+          <h5>medium.co/one</h5>
+        </div>
       </div>
     </section>
 
@@ -89,8 +127,12 @@
         </div>
         <div class="byline">
           <div class="classy">
-            <img src="img/perf-metrics-load-timeline.png" style="width:80%" />
+            <img src="img/perf-metrics-load-timeline.png"
+            style="width:90%" />
           </div>
+        </div>
+        <div class="article-fix">
+          <h5>medium.co/one</h5>
         </div>
       </div>
     </section>
@@ -112,6 +154,9 @@
             First Contentful Paint
           </div>
         </div>
+        <div class="article-fix">
+          <h5>medium.co/one</h5>
+        </div>
       </div>
     </section>
 
@@ -122,35 +167,73 @@
             We measure them by using RUM
           </div>
         </div>
+        <div class="article-fix">
+          <h5>medium.co/two</h5>
+        </div>
       </div>
+    </section>
+
+    <section data-bespoke-state="rum">
     </section>
 
     <section data-bespoke-state="full-text">
       <div class="content">
-        <div class="byline byline--notLine">
+        <h2>Real User Measurement</h2>
+        <div class="byline">
           <div class="classy">
-            Real User Measurement
+            reason one
           </div>
+        </div>
+        <div class="byline">
+          <div class="classy">
+            reason two
+          </div>
+        </div>
+        <div class="byline">
+          <div class="classy">
+            reason thre
+          </div>
+        </div>
+        <div class="article-fix">
+          <h5>medium.co/two</h5>
         </div>
       </div>
     </section>
 
     <section data-bespoke-state="full-text">
       <div class="content">
-        <div class="byline byline--notLine">
+        <h2>Synthetic</h2>
+        <div class="byline">
           <div class="classy">
-            Synthetic
+            reason one
           </div>
+        </div>
+        <div class="byline">
+          <div class="classy">
+            reason two
+          </div>
+        </div>
+        <div class="byline">
+          <div class="classy">
+            reason thre
+          </div>
+        </div>
+        <div class="article-fix">
+          <h5>medium.co/two</h5>
         </div>
       </div>
     </section>
 
     <section data-bespoke-state="full-text">
       <div class="content">
+        <h2>Lighthouse</h2>
         <div class="byline">
           <div class="classy">
             <img src="img/lighthouse.png" />
           </div>
+        </div>
+        <div class="article-fix">
+          <h5>medium.co/two</h5>
         </div>
       </div>
     </section>
@@ -171,6 +254,9 @@
           <div class="classy">
             Synthetic (Lab Data)
           </div>
+        </div>
+        <div class="article-fix">
+          <h5>medium.co/two</h5>
         </div>
       </div>
     </section>
@@ -199,6 +285,9 @@
             <script src="https://gist.github.com/Zizzamia/6132d85489713af539ddc4b38a0f7b00.js"></script>
           </div>
         </div>
+        <div class="article-fix">
+          <h5>medium.co/one</h5>
+        </div>
       </div>
     </section>
 
@@ -218,6 +307,9 @@
           <div class="classy">
             <script src="https://gist.github.com/Zizzamia/cd204cb96bcbcdd2d4ff067cfa7735d7.js"></script>
           </div>
+        </div>
+        <div class="article-fix">
+          <h5>medium.co/one</h5>
         </div>
       </div>
     </section>
@@ -239,6 +331,9 @@
           <div class="classy">
             <script src="https://gist.github.com/Zizzamia/e07ea7615b7ccb9ef7855575e8c0488c.js"></script>
           </div>
+        </div>
+        <div class="article-fix">
+          <h5>medium.co/one</h5>
         </div>
       </div>
     </section>
@@ -262,20 +357,8 @@
             target="_blank">http://zizzamia.github.io/perfume/</a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section data-bespoke-state="full-text">
-      <div class="content">
-        <div class="byline byline--notLine">
-          <div class="classy">
-            Live: <a href="https://plnkr.co/edit/brRKpw?p=preview" target="_blank">https://plnkr.co/edit/brRKpw?p=preview</a>
-          </div>
-        </div>
-        <div class="byline">
-          <div class="classy">
-            <script src="https://gist.github.com/Zizzamia/a527be75e330c50f8498407ad9d221b1.js"></script>
-          </div>
+        <div class="article-fix">
+          <h5>medium.co/one</h5>
         </div>
       </div>
     </section>
@@ -291,6 +374,27 @@
           <div class="classy">
             <script src="https://gist.github.com/Zizzamia/a527be75e330c50f8498407ad9d221b1.js"></script>
           </div>
+        </div>
+        <div class="article-fix">
+          <h5>medium.co/one</h5>
+        </div>
+      </div>
+    </section>
+
+    <section data-bespoke-state="full-text">
+      <div class="content">
+        <div class="byline byline--notLine">
+          <div class="classy">
+            Live: <a href="https://plnkr.co/edit/brRKpw?p=preview" target="_blank">https://plnkr.co/edit/brRKpw?p=preview</a>
+          </div>
+        </div>
+        <div class="byline">
+          <div class="classy">
+            <script src="https://gist.github.com/Zizzamia/a527be75e330c50f8498407ad9d221b1.js"></script>
+          </div>
+        </div>
+        <div class="article-fix">
+          <h5>medium.co/one</h5>
         </div>
       </div>
     </section>
@@ -324,6 +428,9 @@
             It is delightful
           </div>
         </div>
+        <div class="article-fix">
+          <h5>medium.co/two</h5>
+        </div>
       </div>
     </section>
 
@@ -334,6 +441,9 @@
           <div class="classy">
            Time to Interactive is defined as the point at which the layout has stabilized, key webfonts are visible, and the main thread is available enough to handle user input.
           </div>
+        </div>
+        <div class="article-fix">
+          <h5>medium.co/two</h5>
         </div>
       </div>
     </section>
@@ -346,6 +456,9 @@
             <img src="img/long-tasks-1.png" style="width:80%" />
           </div>
         </div>
+        <div class="article-fix">
+          <h5>medium.co/two</h5>
+        </div>
       </div>
     </section>
 
@@ -357,44 +470,59 @@
             <img src="img/long-tasks-2.png" style="width:80%" />
           </div>
         </div>
+        <div class="article-fix">
+          <h5>medium.co/two</h5>
+        </div>
       </div>
     </section>
 
     <section data-bespoke-state="full-text">
       <div class="content">
         <h2>RAIL Guideline 100ms</h2>
+          <div class="article-fix">
+          <h5>medium.co/two</h5>
+        </div>
       </div>
     </section>
 
     <section data-bespoke-state="full-text">
       <div class="content">
-        <h2>DCL</h2>
+        <h2>Step 1 - DCL</h2>
         <div class="byline">
           <div class="classy">
             <img src="img/time-to-iteractive-explainer-1.png" style="width:80%" />
           </div>
         </div>
-      </div>
-    </section>
-
-    <section data-bespoke-state="full-text">
-      <div class="content">
-        <h2>Quite Window</h2>
-        <div class="byline">
-          <div class="classy">
-            <img src="img/time-to-iteractive-explainer-2.png" style="width:80%" />
-          </div>
+        <div class="article-fix">
+          <h5>medium.co/two</h5>
         </div>
       </div>
     </section>
 
     <section data-bespoke-state="full-text">
       <div class="content">
-        <h2>Last long task</h2>
+        <h2>Step 2 - Quite Window</h2>
+        <div class="byline">
+          <div class="classy">
+            <img src="img/time-to-iteractive-explainer-2.png" style="width:80%" />
+          </div>
+        </div>
+        <div class="article-fix">
+          <h5>medium.co/two</h5>
+        </div>
+      </div>
+    </section>
+
+    <section data-bespoke-state="full-text">
+      <div class="content">
+        <h2>Step 3 - Last long task</h2>
         <div class="byline">
           <div class="classy">
             <img src="img/time-to-iteractive-explainer-3.png" style="width:80%" />
           </div>
+        </div>
+        <div class="article-fix">
+          <h5>medium.co/two</h5>
         </div>
       </div>
     </section>
@@ -405,7 +533,7 @@
       </div>
     </section>
 
-    <section data-bespoke-state="practice">
+    <section data-bespoke-state="polyfill">
       <div class="content">
         <h2>TTI Polyfill</h2>
       </div>
@@ -423,12 +551,15 @@
             <script src="https://gist.github.com/Zizzamia/0cbf9a216066a381044f8a037a8fafee.js"></script>
           </div>
         </div>
+        <div class="article-fix">
+          <h5>medium.co/two</h5>
+        </div>
       </div>
     </section>
 
-    <section data-bespoke-state="practice">
+    <section data-bespoke-state="practice-two">
       <div class="content">
-        <h2>TTI with Perfume</h2>
+        <h2>TTI with Perfume.js</h2>
       </div>
     </section>
 
@@ -439,6 +570,79 @@
             Live: <a href="https://plnkr.co/edit/t97Ya6?p=preview" target="_blank">https://plnkr.co/edit/t97Ya6?p=preview</a>
           </div>
         </div>
+        <div class="byline">
+          <div class="classy">
+            <script src="https://gist.github.com/Zizzamia/9588de9385c17ecd642d4859fb1472a2.js"></script>
+          </div>
+        </div>
+        <div class="article-fix">
+          <h5>medium.co/two</h5>
+        </div>
+      </div>
+    </section>
+
+    <section data-bespoke-state="full-text">
+      <div class="content">
+        <h2>Key moments</h2>
+        <div class="byline">
+          <div class="classy">
+            It is happening
+          </div>
+        </div>
+        <div class="byline">
+          <div class="classy">
+            It is useful
+          </div>
+        </div>
+        <div class="byline">
+          <div class="classy">
+            It is usable
+          </div>
+        </div>
+        <div class="byline">
+          <div class="classy">
+            <b>It is delightful</b>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section data-bespoke-state="full-text">
+      <div class="content">
+        <h2>Performance Mark</h2>
+        <div class="byline">
+          <div class="classy">
+            <img src="img/performance-mark.png" style="width:80%" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section data-bespoke-state="full-text">
+      <div class="content">
+        <h2>Performance Mark code</h2>
+        <div class="byline">
+          <div class="classy">
+            <script src="https://gist.github.com/Zizzamia/9588de9385c17ecd642d4859fb1472a2.js"></script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section data-bespoke-state="full-text">
+      <div class="content">
+        <h2>Component First Paint</h2>
+        <div class="byline">
+          <div class="classy">
+            <img src="img/performance-cfp.png" style="width:80%" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section data-bespoke-state="full-text">
+      <div class="content">
+        <h2>Component First Paint code</h2>
         <div class="byline">
           <div class="classy">
             <script src="https://gist.github.com/Zizzamia/9588de9385c17ecd642d4859fb1472a2.js"></script>
@@ -459,14 +663,25 @@
             <img src="img/performance-analytics.png" style="width:80%" />
           </div>
         </div>
+        <div class="article-fix">
+          <h5>medium.co/two</h5>
+        </div>
       </div>
+    </section>
+
+    <section data-bespoke-state="play">
     </section>
 
     <section data-bespoke-state="full-text">
       <div class="content">
         <div class="byline byline--notLine">
           <div class="classy">
-            <b>Article on Medium</b>
+            <b>Perfume.js stickers limited edition</b>
+          </div>
+        </div>
+        <div class="byline byline--notLine">
+          <div class="classy">
+            <b>github.com/zizzamia/perfume.js</b>
           </div>
         </div>
         <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">📣 “First (Contentful) Paint with a touch of Perfume(.js)” <a href="https://twitter.com/hashtag/PerfMatters?src=hash&amp;ref_src=twsrc%5Etfw">#PerfMatters</a><br><br>Let’s play with FP and FCP progress metrics and how to use the PerformanceObserver interface.<a href="https://t.co/GFcGOGOCWT">https://t.co/GFcGOGOCWT</a> <a href="https://t.co/KghPQ7ReAk">pic.twitter.com/KghPQ7ReAk</a></p>&mdash; Leonardo Zizzamia🦉 (@Zizzamia) <a href="https://twitter.com/Zizzamia/status/973638156363771904?ref_src=twsrc%5Etfw">March 13, 2018</a></blockquote>
