@@ -1,0 +1,360 @@
+a {
+  color: #2b7bb9;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: #215f90;
+  text-decoration: underline;
+}
+
+p {
+  font-size: 28px;
+}
+
+ul {
+  list-style-type: disc;
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em;
+}
+ul li {
+  display: list-item;
+  font-size: 30px;
+}
+
+.margin-top {
+  margin-top: 20px !important;
+}
+
+.twitter-body,
+.full-text,
+.code,
+.livecode,
+.full-title {
+  background-color: #f5f8fa;
+}
+
+.full-width-img {
+  width: 100%;
+}
+.only-image * {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+section h2 {
+  line-height: 1.4em;
+}
+article section.white {
+  background-color: #FFF;
+  color: #111;
+}
+
+.livecode input[type="text"] {
+  background: #142444;
+  border: none;
+  border-bottom: 2px solid #000000;
+  color: #F00;
+  width: 80px;
+  margin: 0 10px;
+}
+
+.livecode input:focus {
+  outline: none;
+}
+
+.livecode .hello .result {
+  color: #F80;
+}
+
+.to-the-resque .content {
+  width: 600px;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  width: 800px;
+  margin: 0.4em auto 0.6em;
+  background-color: #3F3F3F;
+}
+
+.long :not(pre) > code[class*="language-"],
+.long pre[class*="language-"] {
+  width: 960px;
+}
+
+.line-highlight {
+  background: rgba(216, 223, 65, 0.13);
+}
+
+pre[data-line] {
+  padding: inherit;
+}
+
+.link a {
+  display: inline-block;
+  margin-top: 1em;
+  font-size: 2em;
+}
+
+/* --- buttons ---- */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  padding:1rem 2rem;
+  background:transparent;
+  border:3px solid #fff;
+  margin:1rem 0;
+  border-radius:4px;
+  color:#fff;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:1rem;
+}
+
+/* --- big labels ---- */
+
+.big-label {
+  font-size:1.5rem;
+}
+
+
+/* ---- backgrounds ---- */
+article.ciao::before {
+  -webkit-filter: blur(0.15px) grayscale(0.3);
+  -moz-filter: blur(0.15px) grayscale(0.3);
+  filter: blur(0.15px) grayscale(0.3);
+  background-image: url("../img/ciao.gif");
+}
+article.san-francisco-1::before {
+  -webkit-filter: grayscale(0) brightness(1);
+  -moz-filter: grayscale(0) brightness(1);
+  filter: grayscale(0) brightness(1);
+  background-image: url("../img/san-francisco-1.gif");
+}
+article.toaster::before {
+  -webkit-filter: blur(0.15px) grayscale(0.3);
+  -moz-filter: blur(0.15px) grayscale(0.3);
+  filter: blur(0.15px) grayscale(0.3);
+  background-image: url("../img/toaster.gif");
+}
+article.toaster-pick::before {
+  -webkit-filter: blur(0.15px) grayscale(0.3);
+  -moz-filter: blur(0.15px) grayscale(0.3);
+  filter: blur(0.15px) grayscale(0.3);
+  background-image: url("../img/toaster-pick.gif");
+}
+article.practice::before {
+  -webkit-filter: blur(0.15px) grayscale(0.3);
+  -moz-filter: blur(0.15px) grayscale(0.3);
+  filter: blur(0.15px) grayscale(0.3);
+  background-image: url("../img/practice.gif");
+}
+article.shoes::before {
+  -webkit-filter: blur(0.15px) grayscale(0.3);
+  -moz-filter: blur(0.15px) grayscale(0.3);
+  filter: blur(0.15px) grayscale(0.3);
+  background-image: url("../img/shoes.gif");
+}
+article.ouch::before {
+  -webkit-filter: blur(0.15px) grayscale(0.3);
+  -moz-filter: blur(0.15px) grayscale(0.3);
+  filter: blur(0.15px) grayscale(0.3);
+  background-image: url("../img/ouch.gif");
+}
+article.happy-face::before {
+  -webkit-filter: blur(0.15px) grayscale(0.3);
+  -moz-filter: blur(0.15px) grayscale(0.3);
+  filter: blur(0.15px) grayscale(0.3);
+  background-image: url("../img/happy-face.gif");
+}
+article.love-you::before {
+  -webkit-filter: blur(0.15px) grayscale(0.3);
+  -moz-filter: blur(0.15px) grayscale(0.3);
+  filter: blur(0.15px) grayscale(0.3);
+  background-image: url("../img/love-you.gif");
+}
+
+
+twitterwidget {
+  margin: 0 auto!important;
+}
+.gist {
+  width: 80%;
+  margin: 30px auto;
+}
+
+.full-text .bespoke-slide,
+.full-title .bespoke-slide,
+.ciao .bespoke-slide,
+.love-you .bespoke-slide,
+.toaster .bespoke-slide,
+.toaster-pick .bespoke-slide,
+.practice .bespoke-slide,
+.shoes .bespoke-slide,
+.ouch .bespoke-slide {
+  margin-top: -1.4em;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-box-align: center;
+  box-align: center;
+}
+.ciao .bespoke-slide,
+.love-you .bespoke-slide {
+  margin-top: 0.2em;
+}
+.happy-face .bespoke-slide {
+  margin-top: 10%;
+}
+
+.title .classy {
+  font-size: 2em;
+}
+
+.twitter-fix {
+  position: fixed;
+  bottom: 0.1em;
+  left: 0.6em;
+  z-index: 22;
+}
+.twitter-fix svg {
+  position: absolute;
+  left: 10px;
+  bottom: -3px;
+}
+.twitter-fix h5 {
+  position: absolute;
+  left: 44px;
+  bottom: 10px;
+  color: #66757f;
+  font-size: 1em;
+  height: 1em;
+  padding: 0;
+  margin: 0;
+}
+
+.profile {
+  margin: 0 auto;
+  width: 600px;
+}
+.profile .rounded-image {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #000;
+  border-radius: 100%;
+  margin-right: 10px;
+  box-shadow: 0px 0px 0px 2px #FFF;
+}
+.profile .rounded-image img {
+  margin: 0;
+  width: 100%;
+}
+.profile .rounded-image-white {
+  border: 2px solid white;
+}
+.profile h3 {
+  display: inline-block;
+  text-transform: lowercase;
+  font-size: 2.2em;
+}
+.profile h3.twitter {
+  text-transform: inherit;
+  font-size: 1.6em;
+}
+
+.white-bg {
+  background-color: #FFF;
+}
+
+.width-100 {
+  width: 100%;
+  margin: 0;
+}
+
+.logo {
+  width: 150px;
+}
+
+.fake-list.two-columns {
+  display: inline-block;
+  width: 550px;
+}
+.text-left {
+  text-align: left;
+}
+
+.black {
+  color: #000;
+}
+.full-text  section .byline {
+  color: #66757f;
+}
+.full-text section .byline b {
+  color: #6c757f;
+}
+.full-text  section .classy {
+  font-size: 2em;
+}
+.full-text section,
+.full-title section,
+.twitter-body section,
+.code section {
+  color: #292f33;
+  text-align: center;
+}
+.twitter-body .bespoke-slide {
+  margin-top: 2em;
+}
+.twitter-body.no-margin .bespoke-slide {
+  margin-top: 0;
+}
+
+.deep-gray-border {
+  border: 3px solid #8899a6;
+}
+.content p {
+  margin: 0.6em 0 0.4em;
+}
+
+pre {
+  margin: 0.2em 0 0.3em;
+}
+code {
+  border-radius: 5px;
+  padding: 0 7px 5px;
+  border: 1px solid rgba(0,0,0,.2);
+  background: rgba(0,0,0,.1);
+}
+pre code {
+  background: #3F3F3F;
+  border: none;
+  font-size: 17px;
+  letter-spacing: -0.6px;
+  line-height: 20px;
+  padding: 0;
+}
+pre code span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.text-uppercase,
+.uppercase {
+  text-transform: uppercase;
+}
+.green {
+  color: green;
+}
+.tomato {
+  color: tomato;
+}
+.byline--notLine::before {
+  border: none!important;
+}
+.byline--notLine::after {
+  border: none!important;
+}
