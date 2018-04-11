@@ -249,7 +249,8 @@ twitterwidget {
 }
 .article-fix h5 {
   left: inherit;
-  right: 44px;
+  bottom: 12px;
+  right: 16px;
   font-size: 0.9em;
 }
 
@@ -374,6 +375,9 @@ pre code span {
 }
 .tomato {
   color: tomato;
+}
+section .byline--big .classy {
+  font-size: 2.4em;
 }
 .byline--notLine::before {
   border: none!important;
