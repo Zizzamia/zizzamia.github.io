@@ -385,3 +385,20 @@ section .byline--big .classy {
 .byline--notLine::after {
   border: none!important;
 }
+.byline--big {
+  margin: 1.2em 0 0 0;
+}
+.gist {
+  margin-top: 0!important;
+  margin-bottom: 0!important;
+}
+.gist .blob-code-inner {
+  font-size: 14px !important;
+  line-height: 22px !important;
+}
+.gist .gist-file {
+  border-bottom: none!important;
+}
+.gist .gist-meta {
+  display: none!important;
+}
