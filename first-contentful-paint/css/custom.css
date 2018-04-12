@@ -118,9 +118,9 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 
 /* ---- backgrounds ---- */
 article.ciao::before {
-  -webkit-filter: blur(0.15px) grayscale(0.3);
-  -moz-filter: blur(0.15px) grayscale(0.3);
-  filter: blur(0.15px) grayscale(0.3);
+  -webkit-filter: grayscale(0) brightness(1);
+  -moz-filter: grayscale(0) brightness(1);
+  filter: grayscale(0) brightness(1);
   background-image: url("../img/ciao.gif");
 }
 article.san-francisco-1::before {
@@ -130,45 +130,45 @@ article.san-francisco-1::before {
   background-image: url("../img/san-francisco-1.gif");
 }
 article.toaster::before {
-  -webkit-filter: blur(0.15px) grayscale(0.3);
-  -moz-filter: blur(0.15px) grayscale(0.3);
-  filter: blur(0.15px) grayscale(0.3);
+  -webkit-filter: grayscale(0) brightness(1);
+  -moz-filter: grayscale(0) brightness(1);
+  filter: grayscale(0) brightness(1);
   background-image: url("../img/toaster.gif");
 }
 article.toaster-pick::before {
-  -webkit-filter: blur(0.15px) grayscale(0.3);
-  -moz-filter: blur(0.15px) grayscale(0.3);
-  filter: blur(0.15px) grayscale(0.3);
+  -webkit-filter: grayscale(0) brightness(1);
+  -moz-filter: grayscale(0) brightness(1);
+  filter: grayscale(0) brightness(1);
   background-image: url("../img/toaster-pick.gif");
 }
 article.practice::before {
-  -webkit-filter: blur(0.15px) grayscale(0.3);
-  -moz-filter: blur(0.15px) grayscale(0.3);
-  filter: blur(0.15px) grayscale(0.3);
+  -webkit-filter: grayscale(0) brightness(1);
+  -moz-filter: grayscale(0) brightness(1);
+  filter: grayscale(0) brightness(1);
   background-image: url("../img/practice.gif");
 }
 article.shoes::before {
-  -webkit-filter: blur(0.15px) grayscale(0.3);
-  -moz-filter: blur(0.15px) grayscale(0.3);
-  filter: blur(0.15px) grayscale(0.3);
+  -webkit-filter: grayscale(0) brightness(1);
+  -moz-filter: grayscale(0) brightness(1);
+  filter: grayscale(0) brightness(1);
   background-image: url("../img/shoes.gif");
 }
 article.ouch::before {
-  -webkit-filter: blur(0.15px) grayscale(0.3);
-  -moz-filter: blur(0.15px) grayscale(0.3);
-  filter: blur(0.15px) grayscale(0.3);
+  -webkit-filter: grayscale(0) brightness(1);
+  -moz-filter: grayscale(0) brightness(1);
+  filter: grayscale(0) brightness(1);
   background-image: url("../img/ouch.gif");
 }
 article.happy-face::before {
-  -webkit-filter: blur(0.15px) grayscale(0.3);
-  -moz-filter: blur(0.15px) grayscale(0.3);
-  filter: blur(0.15px) grayscale(0.3);
+  -webkit-filter: grayscale(0) brightness(1);
+  -moz-filter: grayscale(0) brightness(1);
+  filter: grayscale(0) brightness(1);
   background-image: url("../img/happy-face.gif");
 }
 article.love-you::before {
-  -webkit-filter: blur(0.15px) grayscale(0.3);
-  -moz-filter: blur(0.15px) grayscale(0.3);
-  filter: blur(0.15px) grayscale(0.3);
+  -webkit-filter: grayscale(0) brightness(1);
+  -moz-filter: grayscale(0) brightness(1);
+  filter: grayscale(0) brightness(1);
   background-image: url("../img/love-you.gif");
 }
 
@@ -330,4 +330,76 @@ pre code span {
 }
 .byline--notLine::after {
   border: none!important;
+}
+
+.twitter-fix,
+.article-fix {
+  position: fixed;
+  bottom: 0.1em;
+  left: 0.6em;
+  z-index: 22;
+}
+.article-fix {
+  left: inherit;
+  right: 0.6em;
+  width: 50%;
+}
+.twitter-fix svg {
+  position: absolute;
+  left: 10px;
+  bottom: -1px;
+}
+.twitter-fix h5,
+.article-fix h5 {
+  position: absolute;
+  left: 44px;
+  bottom: 10px;
+  color: #66757f;
+  font-size: 1em;
+  height: 1em;
+  padding: 0;
+  margin: 0;
+}
+.article-fix h5 {
+  left: inherit;
+  bottom: 12px;
+  right: 16px;
+  font-size: 0.9em;
+}
+
+.text-uppercase,
+.uppercase {
+  text-transform: uppercase;
+}
+.green {
+  color: green;
+}
+.tomato {
+  color: tomato;
+}
+section .byline--big .classy {
+  font-size: 2.4em;
+}
+.byline--notLine::before {
+  border: none!important;
+}
+.byline--notLine::after {
+  border: none!important;
+}
+.byline--big {
+  margin: 1.2em 0 0 0;
+}
+.gist {
+  margin-top: 0!important;
+  margin-bottom: 0!important;
+}
+.gist .blob-code-inner {
+  font-size: 14px !important;
+  line-height: 22px !important;
+}
+.gist .gist-file {
+  border-bottom: none!important;
+}
+.gist .gist-meta {
+  display: none!important;
 }
