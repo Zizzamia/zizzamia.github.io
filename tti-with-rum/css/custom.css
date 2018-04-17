@@ -43,6 +43,8 @@ ul li {
 }
 section h2 {
   line-height: 1.4em;
+  font-size: 3em;
+  text-shadow: 1px 1px #222;
 }
 section .content {
   min-width: 60%;
@@ -400,5 +402,10 @@ section .byline--big .classy {
   border-bottom: none!important;
 }
 .gist .gist-meta {
+  display: none!important;
+}
+
+.Tweet-actions.Tweet-action--newsActions,
+.Tweet-metadata.dateline {
   display: none!important;
 }
