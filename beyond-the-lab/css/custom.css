@@ -127,7 +127,8 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 /* ---- backgrounds ---- */
 article.san-francisco-1::before,
 article.rum::before,
-article.play::before {
+article.play::before,
+article.dance::before {
   -webkit-filter: grayscale(0) brightness(1);
   -moz-filter: grayscale(0) brightness(1);
   filter: grayscale(0) brightness(1);
@@ -147,7 +148,7 @@ article.practice-two::before,
 article.polyfill::before,
 article.shoes::before,
 article.ouch::before,
-article.love-you::before {
+article.love-you::before  {
   -webkit-filter: grayscale(0) brightness(1);
   -moz-filter: grayscale(0) brightness(1);
   filter: grayscale(0) brightness(1);
@@ -176,6 +177,9 @@ article.ouch::before {
 }
 article.love-you::before {
   background-image: url("../img/love-you.gif");
+}
+article.dance::before {
+  background-image: url("../img/dance.gif");
 }
 
 
