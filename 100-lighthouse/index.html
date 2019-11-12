@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>reveal.js</title>
+		<link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+		<link rel="stylesheet" href="css/leo.css" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <a
+      style="font-family: &#39;Fira Mono&#39;, sans-serif;text-decoration: none; font-size: 1.2em;position: absolute; bottom: 1em; left: 1.5em; z-index: 2; color: #AAA;"
+      href="http://twitter.com/Zizzamia"
+    >
+      <span>@Zizzamia</span>
+    </a>
+    <div
+      class="reveal none center has-horizontal-slides ready"
+      role="application"
+      data-transition-speed="default"
+      data-background-transition="fade"
+    >
+      <div class="slides">
+        <section class="deck-slide deck-gif">
+          <video src="./assets/videogame-score.mp4"
+          autoplay loop muted playsinline>
+          </video>
+        </section>
+
+        <section aria-hidden="true" >
+          <h2>100% Lighthouse Score</h2>
+          <img src="./assets/score-100.png" />
+          <aside class="notes">
+            <ul>
+              <li>Every one wants the 100% score!</li>
+              <li>It's good for our product and mostly is good for our users.</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section aria-hidden="true" >
+          <h2>Coinbase Lighthouse Score in Nov 2018</h2>
+          <img src="./assets/score-4.png" />
+          <aside class="notes">
+            <ul>
+              <li>Last November we check Coinbase.com score on Lighthouse</li>
+              <li>Which was only 4!!!</li>
+              <li>
+                With two important metrics TTI at 20s and
+                FCP at 8.5s.
+              </li>
+            </ul>
+          </aside>
+        </section>
+
+        <section aria-hidden="true" >
+          <h2>Timing to Level UP 🍄</h2>
+          <ul>
+            <li>Dependency upgrades</li>
+            <li>Better components splitting</li>
+            <li>Route-level code-splitting</li>
+            <li>Preloading late-discovered resources</li>
+            <li>Image Optimization</li>
+            <li>Etc...</li>
+          </ul>
+          <aside class="notes">
+            <ul>
+              <li>We took similar steps other companies took</li>
+              <li>
+                Upgrade Webpack 3 to v4, Fix treeshaking,
+                Route-level Code-Splitting, Preload important chunks
+                and fonts, several image optimizations.
+              </li>
+              <li>...and more small optimizations.</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section aria-hidden="true" >
+          <h2>Coinbase Lighthouse Score in May 2019</h2>
+          <img src="./assets/score-48.png" />
+          <aside class="notes">
+            <ul>
+              <li>Where did we stand now?</li>
+              <li>We went from 20s to 8.5s TTI, and 
+                FCP from 8.5s to 1.7s.</li>
+              <li>We are still far from 100 score</li>
+              <li>
+                But are we measuring the truth performance for all
+                our users?
+              </li>
+              <li>
+                How can we be sure that the result we perform
+                on a test machine is it the same all around the world?
+              </li>
+            </ul>
+          </aside>
+        </section>
+
+        <section aria-hidden="true" >
+          <img src="./assets/lab-field.png" />
+          <aside class="notes">
+            <ul>
+              <li>There are two different enviroments to measure performance.</li>
+              <li>We have a controlled enviroment in the Lab, and is nice 
+                because we can collect so much data.
+                Something like Chrome Dev Tools, WebPageTest or Lighthouse.
+              </li>
+              <li>
+                But it's not the real world and it's only a part of the truth.
+              </li>
+              <li>Performance in the Field anything can happen, 
+                it's a lot different.</li>
+              <li>But Again, one way to see the difference between the two is:
+                - the lab is like unit test
+                - the field is like functional test
+              </li>
+            </ul>
+          </aside>
+        </section>
+        
+        <section class="deck-slide">
+          <h2>Keeping 100% Lighthouse score <br />
+          around the world</h2>
+          <div class="speaker">
+            <img alt="" src="./assets/leo.jpg" />
+            <div class="speaker-info">
+              <span>Leonardo Zizzamia</span>
+              <span class="speaker-info-title">
+                Web Tech Lead at Coinbase.com
+              </span>
+              <a href="http://twitter.com/Zizzamia">@Zizzamia</a>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <ul>
+              <li>Ciao a tutti! Mi chiamo Leonardo Zizzamia</li>
+            </ul>
+          </aside>
+        </section>
+       
+        <section class="deck-slide">
+          <h2>Performance Timeline</h2>
+          <img src="./assets/timeline.png" />
+          <aside class="notes">
+            <ul>
+              <li></li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="deck-slide">
+          <h2>Web performance APIs</h2>
+          <img src="./assets/web-api.gif" style="width: 60%;" />
+          <aside class="notes">
+            <ul>
+              <li>We already have some dope APIs under Recommendation like</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="deck-slide">
+          <h2>window.performance at MDN</h2>
+          <img src="./assets/web-api-spec.png" style="width: 70%;" />
+          <aside class="notes">
+            <ul>
+              <li>Like: High Resolution Time (performance.now()) 
+                and the User Timing (mark(), measure())</li>
+              <li>Part of Performance Timeline Level 2 Specifications Candidate Recommendation, 
+                focus on the new PerformanceObserver</li>
+              <li>https://w3c.github.io/performance-timeline/</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="deck-slide">
+          <h2>PerformanceObserver Interface</h2>
+          <img src="./assets/performance-observer.png" />
+          <aside class="notes">
+            <ul>
+              <li></li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="deck-slide">
+          <h2>FP / FCP PerformancePaintTiming</h2>
+          <img src="./assets/fp-result.png" style="float: left;width: 49%" />
+          <img src="./assets/fcp-result.png" style="float: left;width: 49%" />
+          <aside class="notes">
+            <ul>
+              <li>Paint Timing Specifications, Working Draft</li>
+              <li>https://w3c.github.io/paint-timing</li>
+              <li>High Resolution Time</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="deck-slide">
+          <h2>PerformanceObserver 
+            <a href="https://plnkr.co/edit/ZSjeZb?p=preview" target="_blank">API in practice</a>
+          </h2>
+          <img src="./assets/fcp-practice.png" style="width: 60%" />
+          <aside class="notes">
+            <ul>
+              <li>Paint Timing Specifications, Working Draft</li>
+              <li>https://w3c.github.io/paint-timing</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="deck-slide">
+          <h2>PerformanceObserver API in practice</h2>
+          <img src="./assets/vanilla-demo.gif" style="width: 80%" />
+          <aside class="notes">
+            <ul>
+              <li></li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="deck-slide">
+          <h2>PerformanceObserver isn't perfect yet!</h2>
+          <ul>
+            <li>Till Firefox 63 using Paint was 
+              <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1403027" 
+              target="_blank">throwing an exception</a>
+            </li>
+            <li>False negative results during when 
+              <a href="https://github.com/w3c/paint-timing/issues/40" 
+              target="_blank">document.visibilityState is hidden</a>
+            </li>
+            <li>Etc..</li>
+          </ul>
+          <img src="./assets/woops.gif" style="width: 50%" />
+          <aside class="notes">
+            <ul>
+              <li></li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="deck-slide">
+          <h2>If Vanilla isn't enough, add some sugar!</h2>
+          <img src="./assets/sugar.gif" style="width: 40%" />
+          <aside class="notes">
+            <ul>
+              <li></li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="deck-slide">
+          <img src="./assets/perfume-logo.png" style="width: 28%" />
+          <aside class="notes">
+            <ul>
+              <li></li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="deck-slide">
+          <h3>
+            <a href="https://github.com/zizzamia/perfume.js" 
+            target="_blank">github.com/zizzamia/perfume.js</a>
+          </h3>
+          <img src="./assets/perfume-github.png" style="width: 72%" />
+          <aside class="notes">
+            <ul>
+              <li></li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="deck-slide">
+          <h3>
+            <a href="perfumejs.com" target="_blank">perfumejs.com</a>
+          </h3>
+          <img src="./assets/perfume-doc.png" style="width: 72%" />
+          <aside class="notes">
+            <ul>
+              <li></li>
+            </ul>
+          </aside>
+        </section>
+        
+        <section class="deck-slide">
+          <h2>FP & FCP with Perfume.js</h2>
+          <img src="./assets/perfume-practice.png" />
+          <aside class="notes">
+            <ul>
+              <li></li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="deck-slide">
+          <h2>Perfume.js in practice</h2>
+          <img src="./assets/perfume-demo.gif" style="width: 80%" />
+          <aside class="notes">
+            <ul>
+              <li></li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="deck-slide">
+          <h2>Why Perfume.js?</h2>
+          <ul style="list-style: none">
+            <li>⏰ Latest Performance APIs for precise metrics</li>
+            <li>🔨 Cross browser tested</li>
+            <li>🚿 Filters out false positive/negative results</li>
+            <li>🔭 Browser tracker built-in</li>
+            <li>🤙 Support for async/await syntax</li>
+            <li>🛰 Flexible tracking tool</li>
+            <li>⚡️ Waste-zero ms with Idle Until Urgent strategy built-in</li>
+          </ul>
+          <aside class="notes">
+            <ul>
+              <li></li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="deck-slide">
+          <h2>First Input Delay</h2>
+          <img src="./assets/first-input-delay-demo.gif" style="width: 80%" />
+          <aside class="notes">
+            <ul>
+              <li>Measures the time from when a user first interacts with your site</li>
+              <li>to the time when the browser is actually able to respond to that interaction.</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="deck-slide">
+          <h2>performance.mark() with Perfume.js</a>
+          </h2>
+          <img src="./assets/perfume-mark.png" style="width: 60%" />
+          <aside class="notes">
+            <ul>
+              <li></li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="deck-slide">
+          <h2>Hero Paint</h2>
+          <img src="./assets/hero-paint-demo.gif" style="width: 80%" />
+          <aside class="notes">
+            <ul>
+              <li></li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="deck-slide">
+          <h2>First Contentful Paint - United States</h2>
+          <img src="./assets/fcp-us.png" />
+          <aside class="notes">
+            <ul>
+              <li></li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="deck-slide">
+          <h2>First Input Delay - United States</h2>
+          <img src="./assets/fid-us.png" />
+          <aside class="notes">
+            <ul>
+              <li></li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="deck-slide">
+          <h2>Hero Paint - United States</h2>
+          <img src="./assets/hero-paint-us.png" />
+          <aside class="notes">
+            <ul>
+              <li></li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="deck-slide">
+          <h2>First Contentful Paint <br /> All continents from the top 20 countries</h2>
+          <img src="./assets/fcp-world.png" />
+          <aside class="notes">
+            <ul>
+              <li></li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="deck-slide">
+          <h2>First Contentful Paint - Mobile <br /> All continents from the top 20 countries</h2>
+          <img src="./assets/fcp-mobile-world.png" />
+          <aside class="notes">
+            <ul>
+              <li></li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="deck-slide">
+          <img src="./assets/perfmatters.jpg" />
+        </section>
+
+        <section class="deck-slide">
+          <img src="./assets/love-you.gif" style="width: 70%" />
+        </section>
+      </div>
+
+      <div class="backgrounds">
+        <div
+          class="slide-background deck-slide present"
+          data-loaded="true"
+          style="display: block;"
+        >
+          <div class="slide-background-content"></div>
+        </div>
+        <div
+          class="slide-background future"
+          data-loaded="true"
+          style="display: block;"
+        >
+          <div class="slide-background-content"></div>
+        </div>
+        <div
+          class="slide-background future"
+          data-loaded="true"
+          style="display: block;"
+        >
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none;">
+          <div class="slide-background-content"></div>
+        </div>
+        <div
+          class="slide-background thank-you-slide future"
+          style="display: none;"
+        >
+          <div class="slide-background-content"></div>
+        </div>
+      </div>
+      <div class="progress" style="display: block;">
+        <span style="width: 0px;"></span>
+      </div>
+      <aside
+        class="controls"
+        data-controls-layout="bottom-right"
+        data-controls-back-arrows="faded"
+        style="display: block;"
+      >
+        <button
+          class="navigate-left"
+          aria-label="previous slide"
+          disabled="disabled"
+        >
+          <div class="controls-arrow"></div></button
+        ><button
+          class="navigate-right enabled highlight"
+          aria-label="next slide"
+        >
+          <div class="controls-arrow"></div></button
+        ><button
+          class="navigate-up"
+          aria-label="above slide"
+          disabled="disabled"
+        >
+          <div class="controls-arrow"></div></button
+        ><button
+          class="navigate-down"
+          aria-label="below slide"
+          disabled="disabled"
+        >
+          <div class="controls-arrow"></div>
+        </button>
+      </aside>
+      <div class="slide-number" style="display: none;"></div>
+      <div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div>
+      <div class="pause-overlay">
+        <button class="resume-button">Resume presentation</button>
+      </div>
+    </div>
+
+    <script src="./js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/notes/notes.js", async: true },
+          { src: "plugin/highlight/highlight.js", async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>
