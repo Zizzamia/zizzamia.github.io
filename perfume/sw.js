@@ -1,5 +1,7 @@
 const PERFUME_PRECACHE = [
   'https://zizzamia.github.io/perfume/',
+  'https://zizzamia.github.io/perfume/assets/assets/main.js',
+  'https://zizzamia.github.io/perfume/assets/perfume-logo-v5-0-0.webp',
   'https://zizzamia.github.io/perfume/assets/first-contentful-paint-desktop.webp',
   'https://zizzamia.github.io/SourceSansPro-Regular.3125381951c8362bf251.woff2',
   'https://zizzamia.github.io/OpenSans-Regular.a725497524525c361f0d.woff2'
