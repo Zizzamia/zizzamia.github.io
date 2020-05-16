@@ -30,7 +30,7 @@ const precache = async (precacheURLs) => {
     const integrity = cacheKeysToIntegrities.get(cacheKey);
     const cacheMode = urlsToCacheModes.get(url);
   });
-
+  console.log('sw.precacheURLs', precacheURLs);
   await cache.addAll(precacheURLs);
 }
 
@@ -70,7 +70,7 @@ self.addEventListener('fetch', async event => {
 
 self.addEventListener('install', async () => {
   await self.skipWaiting();
-  precache(PERFUME_PRECACHE);
+  await precache(PERFUME_PRECACHE);
 });
 
 self.addEventListener('activate', event => {
