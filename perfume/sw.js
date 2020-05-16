@@ -16,9 +16,7 @@ const precache = async (precacheURLs) => {
 
   const cache = await caches.open('perfume-cache');
   const alreadyCachedRequests = await cache.keys();
-  console.log('sw.alreadyCachedRequests', alreadyCachedRequests);
   const existingCacheKeys = new Set(alreadyCachedRequests.map((request) => request.url));
-  console.log('sw.existingCacheKeys', existingCacheKeys);
 
   for (const [url, cacheKey] of urlsToCacheKeys) {
     if (existingCacheKeys.has(cacheKey)) {
@@ -58,15 +56,15 @@ const handleResponse = async (event, request) => {
 };
 
 self.addEventListener('fetch', async event => {
-  //const origin = new URL(event.request.url).origin;
-  //if (origin !== 'https://zizzamia.github.io') {
-  //  return;
-  //}
-  //event.respondWith(
-  //  (async function () {
-  //    return await handleResponse(event, event.request);
-  //  })(),
-  //);
+  const origin = new URL(event.request.url).origin;
+  if (origin !== 'https://zizzamia.github.io') {
+    return;
+  }
+  event.respondWith(
+    (async function () {
+      return await handleResponse(event, event.request);
+    })(),
+  );
 });
 
 self.addEventListener('install', async () => {
