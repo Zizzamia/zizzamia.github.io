@@ -46,7 +46,7 @@ const handleResponse = async (event, request) => {
   event.waitUntil(
     (async function () {
       if (responseCached) {
-        const timestamp = await db.get('idb', request.url);
+        const timestamp = await (await db).get('idb', request.url);
         if (timestamp) {
           return timestamp < Date.now() - 2 * 60 * 1000;
         }
@@ -60,7 +60,7 @@ const handleResponse = async (event, request) => {
         return;
       }
       await cache.put(request, responseCloned);
-      await db.set('idb', request.url, Date.now());
+      await (await db).set('idb', request.url, Date.now());
     })(),
   );
   if (responseCached) {
