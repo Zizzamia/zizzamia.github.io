@@ -21,7 +21,7 @@ const handleResponse = async (event, request) => {
 };
 
 self.addEventListener('fetch', async event => {
-  console.log('event', event.request.url, new URL(request.url));
+  console.log('event', event.request.url, new URL(event.request.url));
   // event.respondWith(
   //   (async function () {
   //     return await handleResponse(event, event.request);
