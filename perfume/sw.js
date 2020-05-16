@@ -11,7 +11,7 @@ const urlsToCacheKeys = new Map();
 const urlsToCacheModes = new Map();
 const cacheKeysToIntegrities = new Map();
 
-const db = idb.openDB('perfume-idb', 1, {
+const perfumeDB = idb.openDB('perfume-idb', 1, {
   upgrade(db) {
     db.createObjectStore('idb');
   },
@@ -46,7 +46,7 @@ const handleResponse = async (event, request) => {
   event.waitUntil(
     (async function () {
       if (responseCached) {
-        const timestamp = await (await db).get('idb', request.url);
+        const timestamp = await (await perfumeDB).get('idb', request.url);
         if (timestamp) {
           return timestamp < Date.now() - 2 * 60 * 1000;
         }
@@ -60,7 +60,7 @@ const handleResponse = async (event, request) => {
         return;
       }
       await cache.put(request, responseCloned);
-      await (await db).set('idb', request.url, Date.now());
+      await (await perfumeDB).set('idb', request.url, Date.now());
     })(),
   );
   if (responseCached) {
