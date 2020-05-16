@@ -8,7 +8,7 @@ const handleResponse = async (event, request) => {
         return;
       }
       const responseCloned = responseFetched.clone();
-      if (!responseCloned || responseClone.status !== 200) {
+      if (!responseCloned || responseCloned.status !== 200) {
         return;
       }
       await cache.put(request, responseCloned);
