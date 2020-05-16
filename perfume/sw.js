@@ -60,7 +60,7 @@ const handleResponse = async (event, request) => {
         return;
       }
       await cache.put(request, responseCloned);
-      await (await perfumeDB).set('idb', request.url, Date.now());
+      await (await perfumeDB).put('idb', request.url, Date.now());
     })(),
   );
   if (responseCached) {
