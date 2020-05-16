@@ -38,6 +38,9 @@ const handleResponse = async (event, request) => {
   const responseCached = await cache.match(request);
   event.waitUntil(
     (async function () {
+      if (responseCached) {
+        // TODO expire logic
+      }
       const responseFetched = await fetch(request);
       if (!responseFetched.clone) {
         return;
