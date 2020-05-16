@@ -1,7 +1,7 @@
 const PERFUME_PRECACHE = [
   'https://zizzamia.github.io/perfume/',
   'https://zizzamia.github.io/perfume/assets/first-contentful-paint-desktop.webp',
-  'https://zizzamia.github.io/perfume/SourceSansPro-Regular.3125381951c8362bf251.woff2',
+  'https://zizzamia.github.io/SourceSansPro-Regular.3125381951c8362bf251.woff2',
   'https://zizzamia.github.io/OpenSans-Regular.a725497524525c361f0d.woff2'
 ];
 const urlsToCacheKeys = new Map();
@@ -30,7 +30,6 @@ const precache = async (precacheURLs) => {
     const integrity = cacheKeysToIntegrities.get(cacheKey);
     const cacheMode = urlsToCacheModes.get(url);
   });
-  console.log('sw.precacheURLs', precacheURLs);
   await cache.addAll(precacheURLs);
 }
 
