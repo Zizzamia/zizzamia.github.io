@@ -4,13 +4,23 @@
   "display": "standalone",
   "icons": [
     {
-      "src": "https://zizzamia.github.io/perfume/favicon.ico",
+      "src": "https://zizzamia.github.io/perfume/assetsgz/favicon/favicon-48x48.png",
       "type": "image/png",
-      "sizes": "16x16"
+      "sizes": "48x48"
+    },
+    {
+      "src": "https://zizzamia.github.io/perfume/assetsgz/favicon/favicon-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "https://zizzamia.github.io/perfume/assetsgz/favicon/favicon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
     }
   ],
   "name": "Perfume.js - Page speed monitoring",
   "short_name": "Perfume.js",
-  "start_url": "/perfume",
+  "start_url": "/",
   "theme_color": "#fffeff"
 }
