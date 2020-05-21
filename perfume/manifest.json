@@ -21,6 +21,6 @@
   ],
   "name": "Perfume.js - Page speed monitoring",
   "short_name": "Perfume.js",
-  "start_url": "/",
+  "start_url": "/perfume/",
   "theme_color": "#fffeff"
 }
