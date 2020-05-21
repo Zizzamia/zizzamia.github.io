@@ -173,6 +173,155 @@ npm install perfume.js --save
         </div>
       </div>
 
+      <div class="box">
+        <h3 class="box-title" id="/quick-start/">
+          <a href="https://zizzamia.github.io/perfume/#/quick-start/">
+            Quick Start
+          </a>
+        </h3>
+        <p>
+          Metrics like Navigation Timing, Network Information, FP, FCP, FID, LCP, CLS
+          and TBT are default reported with Perfume; All results will be reported to
+          the analyticsTracker callback, and the code below is just one way for you to
+          organize your tracking, feel free to tweak it suit your needs.
+        </p>
+        <p class="box-demo">
+          Oh btw, you're being served a
+          <b data-experience>lighter experience</b> based on your hardware,
+          network conditions and data saver preference.<br /><br />
+      
+          <b>// Device Information</b><br />
+          Network information: <b data-effective-type>--</b><br />
+          Device Memory: <b data-device-memory>--</b><br />
+          Hardware Concurrency:
+          <b data-hardware-concurrency>--</b><br />
+          Data Saver preference: <b data-save-data>false</b><br />
+          <br />
+          <b>// Main Performance Metrics</b><br />
+          Time To First Byte: <b><span data-ttfb>0</span> ms</b><br />
+          First Paint: <b><span data-fp>--</span> ms</b><br />
+          First Contentful Paint: <b><span data-fcp>--</span> ms</b><br />
+          First Input Delay: <b><span data-fid>--</span> ms</b><br />
+          Largest Contentful Paint: <b><span data-lcp>--</span> ms</b><br />
+          Cumulative Layout Shift: <b><span data-cls>--</span> score</b><br />
+          Total Blocking Time: <b><span data-tbt>--</span> ms</b><br /><br />
+      
+          <b>// Secondary Performance Metrics</b><br />
+          <b
+            >// These metrics activate on a set delay or when the tab changes
+            visibility</b
+          ><br />
+          Largest Contentful Paint Final: <b><span data-lcp-final>--</span> ms</b><br />
+          Cumulative Layout Shift Final: <b><span data-cls-final>--</span></b><br />
+          Total Blocking Time 5S: <b><span data-tbt5s>--</span> ms</b><br />
+          Total Blocking Time 10S: <b><span data-tbt10s>--</span> ms</b><br />
+          Total Blocking Time Final: <b><span data-tbt-final>--</span> ms</b><br /><br />
+      
+          <b>// Experimental Performance metric</b><br />
+          dataConsumption: <b data-consumption>--</b>
+        </p>
+        <div class="box-code js">
+          <table>
+            <tbody>
+              <tr>
+                <td class="code">
+                  <pre><span class="red">const</span> <span class="blue">perfume</span> <span class="red">= new</span> <span class="violet">Perfume</span>({
+  <span class="violet">analyticsTracker</span><span class="red">:</span> (options) <span class="red">=></span> {
+    <span class="red">const</span> { metricName, data, navigatorInformation } <span class="red">=</span> options;
+    <span class="red">switch</span> (metricName) {
+      <span class="red">case</span> 'navigationTiming'<span class="red">:</span>
+        if (data && data.timeToFirstByte) {
+          myAnalyticsTool.<span class="violet">track</span>('navigationTiming', data);
+        }
+        <span class="red">break</span>;
+      <span class="red">case</span> 'networkInformation'<span class="red">:</span>
+        if (data && data.effectiveType) {
+          myAnalyticsTool.<span class="violet">track</span>('networkInformation', data);
+        }
+        <span class="red">break</span>;
+      <span class="red">case</span> 'fp'<span class="red">:</span>
+        myAnalyticsTool.<span class="violet">track</span>('firstPaint', { duration: data });
+        <span class="red">break</span>;
+      <span class="red">case</span> 'fcp'<span class="red">:</span>
+        myAnalyticsTool.<span class="violet">track</span>('firstContentfulPaint', { duration: data });
+        <span class="red">break</span>;
+      <span class="red">case</span> 'fid'<span class="red">:</span>
+        myAnalyticsTool.<span class="violet">track</span>('firstInputDelay', { duration: data });
+        <span class="red">break</span>;
+      <span class="red">case</span> 'lcp'<span class="red">:</span>
+        myAnalyticsTool.<span class="violet">track</span>('largestContentfulPaint', { duration: data });
+        <span class="red">break</span>;
+      <span class="red">case</span> 'lcpFinal'<span class="red">:</span>
+        myAnalyticsTool.<span class="violet">track</span>('largestContentfulPaintFinal', { duration: data });
+        <span class="red">break</span>;
+      <span class="red">case</span> 'cls'<span class="red">:</span>
+        myAnalyticsTool.<span class="violet">track</span>('cumulativeLayoutShift', { duration: data });
+        <span class="red">break</span>;
+      <span class="red">case</span> 'clsFinal'<span class="red">:</span>
+        myAnalyticsTool.<span class="violet">track</span>('cumulativeLayoutShiftFinal', { duration: data });
+        <span class="red">break</span>;
+      <span class="red">case</span> 'tbt'<span class="red">:</span>
+        myAnalyticsTool.<span class="violet">track</span>('totalBlockingTime', { duration: data });
+        <span class="red">break</span>;
+      <span class="red">case</span> 'tbt5S'<span class="red">:</span>
+        myAnalyticsTool.<span class="violet">track</span>('totalBlockingTime5S', { duration: data });
+        <span class="red">break</span>;
+      <span class="red">case</span> 'tbt10S'<span class="red">:</span>
+        myAnalyticsTool.<span class="violet">track</span>('totalBlockingTime10S', { duration: data });
+        <span class="red">break</span>;
+      <span class="red">case</span> 'tbtFinal'<span class="red">:</span>
+        myAnalyticsTool.<span class="violet">track</span>('totalBlockingTimeFinal', { duration: data });
+        <span class="red">break</span>;
+      <span class="red">default</span>:
+        myAnalyticsTool.<span class="violet">track</span>(metricName, { duration: data });
+        <span class="red">break</span>;
+    }
+  },
+});</pre>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br />
+        <p>
+          In a world with widely varying device capabilities, a one-size-fits-all
+          event doesn’t always work. Perfume adds <b>data enrichment</b> to all events
+          so we can better understand the real world experiences:
+        </p>
+        <ul>
+          <li><b>deviceMemory</b>: the user's device memory (RAM).</li>
+          <li>
+            <b>hardwareConcurrency</b>: the number of logical CPU processor cores on
+            the user's device.
+          </li>
+          <li>
+            <b>serviceWorkerStatus</b>: status of the service worker between
+            controlled, supported and unsupported.
+          </li>
+        </ul>
+        <p>
+          Based on the Navigator APIs the library can help us differentiate between a
+          low-end and a high-end device/experience:
+        </p>
+        <ul>
+          <li><b>isLowEndDevice</b>: combination of the score of RAM and CPU.</li>
+          <li>
+            <b>isLowEndExperience</b>: combination of the score of RAM, CPU,
+            NetworkStatus and SaveData.
+          </li>
+        </ul>
+      </div>
+      
+      <div class="box">
+        <h2 class="box-title">Performance audits</h2>
+        <p>
+          Coo coo coo
+          <a href="https://www.youtube.com/watch?v=zDcbpFimUc8" rel="noreferrer"
+          target="_blank">cool</a>, let's learn something new about measuring <b>page's speed</b> performance.
+        </p>
+      </div>
+
       <app-root></app-root>
 
       <div class="box">
